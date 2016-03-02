@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 23-feb-2016 11:32:04 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="models.Tarfracc" table="tarfracc">
+        <composite-id name="id" class="models.TarfraccId">
+            <key-property name="codemp" type="short">
+                <column name="codemp" />
+            </key-property>
+            <key-property name="coddel" type="short">
+                <column name="coddel" />
+            </key-property>
+            <key-property name="numtar" type="short">
+                <column name="numtar" />
+            </key-property>
+            <key-property name="aplica" type="string">
+                <column name="aplica" length="2" />
+            </key-property>
+            <key-property name="feclim" type="date">
+                <column name="feclim" length="10" />
+            </key-property>
+            <key-property name="fracci" type="big_decimal">
+                <column name="fracci" precision="8" />
+            </key-property>
+            <key-property name="baremo" type="char">
+                <column name="baremo" length="1" />
+            </key-property>
+        </composite-id>
+        <property name="precio" type="big_decimal">
+            <column name="precio" precision="11" scale="4" not-null="true">
+                <comment>Precio</comment>
+            </column>
+        </property>
+        <property name="fraton" type="java.lang.Character">
+            <column name="fraton" length="1">
+                <comment>Fraccion tonelada</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

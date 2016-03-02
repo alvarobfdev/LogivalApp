@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 23-feb-2016 11:32:04 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="models.Pelhamin" table="pelhamin">
+        <composite-id name="id" class="models.PelhaminId">
+            <key-property name="empresa" type="string">
+                <column name="empresa" length="20" />
+            </key-property>
+            <key-property name="entsal" type="char">
+                <column name="entsal" length="1" />
+            </key-property>
+            <key-property name="nument" type="string">
+                <column name="nument" length="15" />
+            </key-property>
+            <key-property name="fecrec" type="date">
+                <column name="fecrec" length="10" />
+            </key-property>
+            <key-property name="idclie" type="string">
+                <column name="idclie" length="15" />
+            </key-property>
+            <key-property name="nomcli" type="string">
+                <column name="nomcli" length="50" />
+            </key-property>
+            <key-property name="domter" type="string">
+                <column name="domter" length="50" />
+            </key-property>
+            <key-property name="pobter" type="string">
+                <column name="pobter" length="40" />
+            </key-property>
+            <key-property name="cpoter" type="string">
+                <column name="cpoter" length="15" />
+            </key-property>
+            <key-property name="prvter" type="string">
+                <column name="prvter" length="30" />
+            </key-property>
+            <key-property name="paiter" type="string">
+                <column name="paiter" length="3" />
+            </key-property>
+            <key-property name="tefter" type="string">
+                <column name="tefter" length="20" />
+            </key-property>
+            <key-property name="faxter" type="string">
+                <column name="faxter" length="20" />
+            </key-property>
+            <key-property name="observ" type="string">
+                <column name="observ" length="80" />
+            </key-property>
+            <key-property name="nconte" type="string">
+                <column name="nconte" length="12" />
+            </key-property>
+            <key-property name="idline" type="string">
+                <column name="idline" length="15" />
+            </key-property>
+            <key-property name="idartic" type="string">
+                <column name="idartic" length="15" />
+            </key-property>
+            <key-property name="localiz" type="string">
+                <column name="localiz" length="15" />
+            </key-property>
+            <key-property name="pack" type="string">
+                <column name="pack" length="15" />
+            </key-property>
+            <key-property name="pares" type="java.lang.Short">
+                <column name="pares" />
+            </key-property>
+            <key-property name="modelo" type="string">
+                <column name="modelo" length="20" />
+            </key-property>
+            <key-property name="color" type="string">
+                <column name="color" length="20" />
+            </key-property>
+            <key-property name="marca" type="string">
+                <column name="marca" length="20" />
+            </key-property>
+            <key-property name="cajas" type="java.lang.Integer">
+                <column name="cajas" />
+            </key-property>
+            <key-property name="codbar" type="string">
+                <column name="codbar" length="15" />
+            </key-property>
+            <key-property name="codfis" type="string">
+                <column name="codfis" length="15" />
+            </key-property>
+            <key-property name="nomfis" type="string">
+                <column name="nomfis" length="50" />
+            </key-property>
+            <key-property name="numlin" type="short">
+                <column name="numlin" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

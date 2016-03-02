@@ -1,0 +1,70 @@
+JFDML JFormDesigner: "5.2.2.2.228" Java: "1.8.0_65" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jgoodies.forms.layout.FormLayout ) {
+			"$columnSpecs": "35dlu, labelcompgap, 37dlu, labelcompgap, 25dlu, labelcompgap, 87dlu, labelcompgap, 25dlu, labelcompgap, 115dlu, labelcompgap, 86dlu"
+			"$rowSpecs": "default, linegap, default, linegap, default, linegap, default, linegap, default, linegap, default, linegap, default"
+		} ) {
+			name: "this"
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "btnExportPDF"
+				"text": "Exportar a PDF"
+			}, new FormLayoutConstraints( class com.jgoodies.forms.layout.CellConstraints ) {
+				"gridY": 3
+				"gridWidth": 4
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "btn_actualizarWeb"
+				"text": "Actualizar en web"
+			}, new FormLayoutConstraints( class com.jgoodies.forms.layout.CellConstraints ) {
+				"gridX": 7
+				"gridY": 3
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "btn_sent_email"
+				"text": "Enviar factura a cliente (email)"
+			}, new FormLayoutConstraints( class com.jgoodies.forms.layout.CellConstraints ) {
+				"gridX": 11
+				"gridY": 3
+			} )
+			add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+				name: "scrollPane1"
+				add( new FormComponent( "javax.swing.JTable" ) {
+					name: "table1"
+				} )
+			}, new FormLayoutConstraints( class com.jgoodies.forms.layout.CellConstraints ) {
+				"gridWidth": 13
+				"gridY": 7
+			} )
+			add( new FormComponent( "javax.swing.JCheckBox" ) {
+				name: "cb_all_web"
+				"text": "Seleccionar todos para web"
+			}, new FormLayoutConstraints( class com.jgoodies.forms.layout.CellConstraints ) {
+				"gridY": 9
+				"gridWidth": 7
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "labelProgressExport"
+				"text": "text"
+			}, new FormLayoutConstraints( class com.jgoodies.forms.layout.CellConstraints ) {
+				"gridY": 11
+				"hAlign": sfield com.jgoodies.forms.layout.CellConstraints CENTER
+				"vAlign": sfield com.jgoodies.forms.layout.CellConstraints CENTER
+				"gridWidth": 13
+			} )
+			add( new FormComponent( "javax.swing.JProgressBar" ) {
+				name: "progressBar1"
+			}, new FormLayoutConstraints( class com.jgoodies.forms.layout.CellConstraints ) {
+				"gridY": 13
+				"hAlign": sfield com.jgoodies.forms.layout.CellConstraints CENTER
+				"vAlign": sfield com.jgoodies.forms.layout.CellConstraints CENTER
+				"gridWidth": 13
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 10 )
+			"size": new java.awt.Dimension( 800, 600 )
+		} )
+	}
+}

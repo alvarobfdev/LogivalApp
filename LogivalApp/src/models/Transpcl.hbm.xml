@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 23-feb-2016 11:32:04 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="models.Transpcl" table="transpcl">
+        <composite-id name="id" class="models.TranspclId">
+            <key-property name="codemp" type="short">
+                <column name="codemp" />
+            </key-property>
+            <key-property name="codtra" type="short">
+                <column name="codtra" />
+            </key-property>
+            <key-property name="codcli" type="short">
+                <column name="codcli" />
+            </key-property>
+            <key-property name="codctr" type="int">
+                <column name="codctr" />
+            </key-property>
+            <key-property name="nomctr" type="string">
+                <column name="nomctr" length="40" />
+            </key-property>
+            <key-property name="alfirm" type="java.lang.Character">
+                <column name="alfirm" length="1" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 23-feb-2016 11:32:04 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="models.Paispro" table="paispro">
+        <composite-id name="id" class="models.PaisproId">
+            <key-property name="pais" type="short">
+                <column name="pais" />
+            </key-property>
+            <key-property name="provin" type="short">
+                <column name="provin" />
+            </key-property>
+            <key-property name="nombre" type="string">
+                <column name="nombre" length="20" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

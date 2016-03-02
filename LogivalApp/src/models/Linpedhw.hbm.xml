@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 23-feb-2016 11:32:04 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="models.Linpedhw" table="linpedhw">
+        <composite-id name="id" class="models.LinpedhwId">
+            <key-property name="nalbar" type="int">
+                <column name="nalbar" />
+            </key-property>
+            <key-property name="linalb" type="short">
+                <column name="linalb" />
+            </key-property>
+        </composite-id>
+        <property name="numped" type="int">
+            <column name="numped" not-null="true" />
+        </property>
+        <property name="linped" type="java.lang.Short">
+            <column name="linped" />
+        </property>
+        <property name="codart" type="string">
+            <column name="codart" length="20" />
+        </property>
+        <property name="descri" type="string">
+            <column name="descri" length="40" />
+        </property>
+        <property name="fcaduc" type="date">
+            <column name="fcaduc" length="10" />
+        </property>
+        <property name="lotefb" type="string">
+            <column name="lotefb" length="20" />
+        </property>
+        <property name="nserie" type="string">
+            <column name="nserie" length="20" />
+        </property>
+        <property name="cantid" type="big_decimal">
+            <column name="cantid" precision="11" scale="3" />
+        </property>
+        <property name="bultos" type="java.lang.Short">
+            <column name="bultos" />
+        </property>
+        <property name="kilos" type="big_decimal">
+            <column name="kilos" precision="7" />
+        </property>
+        <property name="volume" type="big_decimal">
+            <column name="volume" precision="7" scale="3" />
+        </property>
+        <property name="palets" type="java.lang.Short">
+            <column name="palets" />
+        </property>
+        <property name="precio" type="big_decimal">
+            <column name="precio" precision="9" />
+        </property>
+        <property name="dtoli1" type="big_decimal">
+            <column name="dtoli1" precision="5" />
+        </property>
+        <property name="dtoli2" type="big_decimal">
+            <column name="dtoli2" precision="5" />
+        </property>
+        <property name="idsscc" type="string">
+            <column name="idsscc" length="18" />
+        </property>
+        <property name="codkit" type="string">
+            <column name="codkit" length="20" />
+        </property>
+    </class>
+</hibernate-mapping>

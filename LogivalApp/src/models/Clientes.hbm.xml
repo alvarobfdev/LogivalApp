@@ -1,0 +1,146 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 23-feb-2016 11:32:04 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="models.Clientes" table="clientes">
+        <composite-id name="id" class="models.ClientesId">
+            <key-property name="codemp" type="short">
+                <column name="codemp" />
+            </key-property>
+            <key-property name="codcli" type="short">
+                <column name="codcli" />
+            </key-property>
+        </composite-id>
+        <property name="nomacc" type="string">
+            <column name="nomacc" length="30" not-null="true">
+                <comment>Nombre de acceso</comment>
+            </column>
+        </property>
+        <property name="nomcli" type="string">
+            <column name="nomcli" length="40" not-null="true">
+                <comment>Nombre</comment>
+            </column>
+        </property>
+        <property name="domcli" type="string">
+            <column name="domcli" length="40" not-null="true">
+                <comment>Domicilio</comment>
+            </column>
+        </property>
+        <property name="pobcli" type="string">
+            <column name="pobcli" length="20" not-null="true">
+                <comment>Poblacion</comment>
+            </column>
+        </property>
+        <property name="codpos" type="java.lang.Integer">
+            <column name="codpos">
+                <comment>C&#194;&#162;digo Postal</comment>
+            </column>
+        </property>
+        <property name="provin" type="java.lang.Short">
+            <column name="provin">
+                <comment>Provincia</comment>
+            </column>
+        </property>
+        <property name="pais" type="java.lang.Short">
+            <column name="pais">
+                <comment>Pa&#194;&#161;s</comment>
+            </column>
+        </property>
+        <property name="telefo" type="string">
+            <column name="telefo" length="14">
+                <comment>Tel&#194;&#130;fono</comment>
+            </column>
+        </property>
+        <property name="telefx" type="string">
+            <column name="telefx" length="14">
+                <comment>Telefax</comment>
+            </column>
+        </property>
+        <property name="person" type="string">
+            <column name="person" length="30">
+                <comment>Persona de Contacto</comment>
+            </column>
+        </property>
+        <property name="cifdni" type="string">
+            <column name="cifdni" length="15">
+                <comment>N.I.F.</comment>
+            </column>
+        </property>
+        <property name="forpag" type="string">
+            <column name="forpag" length="3">
+                <comment>Clave forma de pago</comment>
+            </column>
+        </property>
+        <property name="codpro" type="string">
+            <column name="codpro" length="12">
+                <comment>Codigo proveedor para cliente</comment>
+            </column>
+        </property>
+        <property name="tipiva" type="char">
+            <column name="tipiva" length="1" not-null="true">
+                <comment>Clave IVA</comment>
+            </column>
+        </property>
+        <property name="sislog" type="string">
+            <column name="sislog" length="7">
+                <comment>Sistema remoto</comment>
+            </column>
+        </property>
+        <property name="fecalt" type="date">
+            <column name="fecalt" length="10">
+                <comment>Fecha de Alta</comment>
+            </column>
+        </property>
+        <property name="fecbaj" type="date">
+            <column name="fecbaj" length="10">
+                <comment>Fecha de baja</comment>
+            </column>
+        </property>
+        <property name="serlib" type="java.lang.Character">
+            <column name="serlib" length="1">
+                <comment>Serie num. libre (S/N)</comment>
+            </column>
+        </property>
+        <property name="serent" type="string">
+            <column name="serent" length="2">
+                <comment>Serie num. entradas</comment>
+            </column>
+        </property>
+        <property name="sersal" type="string">
+            <column name="sersal" length="2">
+                <comment>Serie num. salidas</comment>
+            </column>
+        </property>
+        <property name="autone" type="java.lang.Character">
+            <column name="autone" length="1">
+                <comment>Numer. auto. entradas</comment>
+            </column>
+        </property>
+        <property name="autons" type="java.lang.Character">
+            <column name="autons" length="1">
+                <comment>Numer. auto. salidas</comment>
+            </column>
+        </property>
+        <property name="copias" type="java.lang.Short">
+            <column name="copias">
+                <comment>Copias albaran</comment>
+            </column>
+        </property>
+        <property name="tpapel" type="java.lang.Character">
+            <column name="tpapel" length="1">
+                <comment>Papel (Blanco/Preimpr)</comment>
+            </column>
+        </property>
+        <property name="ctactb" type="string">
+            <column name="ctactb" length="12">
+                <comment>Numero Cuenta Contable</comment>
+            </column>
+        </property>
+        <property name="email" type="string">
+            <column name="email" length="50">
+                <comment>Email cliente</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

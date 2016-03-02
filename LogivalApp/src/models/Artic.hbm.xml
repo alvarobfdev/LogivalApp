@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 23-feb-2016 11:32:04 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="models.Artic" table="artic">
+        <composite-id name="id" class="models.ArticId">
+            <key-property name="codemp" type="short">
+                <column name="codemp" />
+            </key-property>
+            <key-property name="codcli" type="short">
+                <column name="codcli" />
+            </key-property>
+            <key-property name="codart" type="string">
+                <column name="codart" length="20" />
+            </key-property>
+            <key-property name="descri" type="string">
+                <column name="descri" length="40" />
+            </key-property>
+            <key-property name="kgsuni" type="big_decimal">
+                <column name="kgsuni" precision="7" scale="3" />
+            </key-property>
+            <key-property name="facbas" type="big_decimal">
+                <column name="facbas" precision="7" scale="3" />
+            </key-property>
+            <key-property name="basalm" type="string">
+                <column name="basalm" length="3" />
+            </key-property>
+            <key-property name="precio" type="big_decimal">
+                <column name="precio" precision="9" />
+            </key-property>
+            <key-property name="stkmin" type="big_decimal">
+                <column name="stkmin" precision="11" scale="3" />
+            </key-property>
+            <key-property name="baralm" type="char">
+                <column name="baralm" length="1" />
+            </key-property>
+            <key-property name="caduci" type="char">
+                <column name="caduci" length="1" />
+            </key-property>
+            <key-property name="tipzon" type="string">
+                <column name="tipzon" length="3" />
+            </key-property>
+            <key-property name="volume" type="big_decimal">
+                <column name="volume" precision="7" scale="3" />
+            </key-property>
+            <key-property name="codbar" type="string">
+                <column name="codbar" length="30" />
+            </key-property>
+            <key-property name="ctlser" type="java.lang.Character">
+                <column name="ctlser" length="1" />
+            </key-property>
+            <key-property name="adecua" type="java.lang.Character">
+                <column name="adecua" length="1" />
+            </key-property>
+            <key-property name="barcpe" type="java.lang.Character">
+                <column name="barcpe" length="1" />
+            </key-property>
+            <key-property name="basman" type="string">
+                <column name="basman" length="3" />
+            </key-property>
+            <key-property name="barman" type="java.lang.Character">
+                <column name="barman" length="1" />
+            </key-property>
+            <key-property name="basmen" type="string">
+                <column name="basmen" length="3" />
+            </key-property>
+            <key-property name="barmen" type="java.lang.Character">
+                <column name="barmen" length="1" />
+            </key-property>
+            <key-property name="basmsa" type="string">
+                <column name="basmsa" length="3" />
+            </key-property>
+            <key-property name="barmsa" type="java.lang.Character">
+                <column name="barmsa" length="1" />
+            </key-property>
+            <key-property name="envweb" type="java.lang.Character">
+                <column name="envweb" length="1" />
+            </key-property>
+            <key-property name="codkit" type="string">
+                <column name="codkit" length="20" />
+            </key-property>
+            <key-property name="codcom" type="java.lang.Integer">
+                <column name="codcom" />
+            </key-property>
+            <key-property name="fifoli" type="java.lang.Character">
+                <column name="fifoli" length="1" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 23-feb-2016 11:32:04 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="models.Pobalma" table="pobalma">
+        <composite-id name="id" class="models.PobalmaId">
+            <key-property name="numero" type="int">
+                <column name="numero" />
+            </key-property>
+            <key-property name="codemp" type="short">
+                <column name="codemp" />
+            </key-property>
+            <key-property name="coddel" type="short">
+                <column name="coddel" />
+            </key-property>
+        </composite-id>
+        <property name="barrxp" type="java.lang.Character">
+            <column name="barrxp" length="1">
+                <comment>Baremo reexpedicion</comment>
+            </column>
+        </property>
+        <property name="codtra" type="java.lang.Short">
+            <column name="codtra">
+                <comment>Codigo Transportista</comment>
+            </column>
+        </property>
+        <property name="grupo" type="java.lang.Short">
+            <column name="grupo">
+                <comment>Grupo de tarifa</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 23-feb-2016 11:32:04 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="models.Kachakil" table="kachakil">
+        <composite-id name="id" class="models.KachakilId">
+            <key-property name="modelo" type="string">
+                <column name="modelo" length="15" />
+            </key-property>
+            <key-property name="tallas" type="string">
+                <column name="tallas" length="10" />
+            </key-property>
+            <key-property name="marca" type="string">
+                <column name="marca" length="20" />
+            </key-property>
+            <key-property name="destino" type="string">
+                <column name="destino" length="20" />
+            </key-property>
+            <key-property name="cajas" type="java.lang.Integer">
+                <column name="cajas" />
+            </key-property>
+            <key-property name="pares" type="java.lang.Integer">
+                <column name="pares" />
+            </key-property>
+            <key-property name="norden" type="int">
+                <column name="norden" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

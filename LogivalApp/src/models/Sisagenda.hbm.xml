@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 23-feb-2016 11:32:04 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="models.Sisagenda" table="sisagenda">
+        <composite-id name="id" class="models.SisagendaId">
+            <key-property name="sislog" type="string">
+                <column name="sislog" length="7" />
+            </key-property>
+            <key-property name="nombre" type="string">
+                <column name="nombre" length="30" />
+            </key-property>
+            <key-property name="lectur" type="java.lang.Character">
+                <column name="lectur" length="1" />
+            </key-property>
+            <key-property name="clogin" type="string">
+                <column name="clogin" length="5" />
+            </key-property>
+            <key-property name="contra" type="string">
+                <column name="contra" length="5" />
+            </key-property>
+            <key-property name="horari" type="string">
+                <column name="horari" length="7" />
+            </key-property>
+            <key-property name="cmodem" type="string">
+                <column name="cmodem" length="8" />
+            </key-property>
+            <key-property name="baudio" type="string">
+                <column name="baudio" length="6" />
+            </key-property>
+            <key-property name="protoc" type="char">
+                <column name="protoc" length="1" />
+            </key-property>
+            <key-property name="telefo" type="string">
+                <column name="telefo" length="20" />
+            </key-property>
+            <key-property name="lecdir" type="string">
+                <column name="lecdir" length="50" />
+            </key-property>
+            <key-property name="escdir" type="string">
+                <column name="escdir" length="50" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

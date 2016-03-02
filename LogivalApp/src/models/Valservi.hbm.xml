@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 23-feb-2016 11:32:04 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="models.Valservi" table="valservi">
+        <composite-id name="id" class="models.ValserviId">
+            <key-property name="codemp" type="short">
+                <column name="codemp" />
+            </key-property>
+            <key-property name="codcli" type="short">
+                <column name="codcli" />
+            </key-property>
+            <key-property name="tipalb" type="char">
+                <column name="tipalb" length="1" />
+            </key-property>
+            <key-property name="seralb" type="string">
+                <column name="seralb" length="2" />
+            </key-property>
+            <key-property name="ejerci" type="short">
+                <column name="ejerci" />
+            </key-property>
+            <key-property name="numalb" type="int">
+                <column name="numalb" />
+            </key-property>
+            <key-property name="aplica" type="string">
+                <column name="aplica" length="2" />
+            </key-property>
+            <key-property name="bastar" type="string">
+                <column name="bastar" length="3" />
+            </key-property>
+        </composite-id>
+        <property name="cenfac" type="short">
+            <column name="cenfac" not-null="true">
+                <comment>Centro Facturacion</comment>
+            </column>
+        </property>
+        <property name="serfac" type="char">
+            <column name="serfac" length="1" not-null="true">
+                <comment>Serie Factura</comment>
+            </column>
+        </property>
+        <property name="ejefac" type="short">
+            <column name="ejefac" not-null="true">
+                <comment>A&#194;&#164;o Factura</comment>
+            </column>
+        </property>
+        <property name="numfac" type="int">
+            <column name="numfac" not-null="true">
+                <comment>N&#194;&#163;mero Factura</comment>
+            </column>
+        </property>
+        <property name="numlin" type="short">
+            <column name="numlin" not-null="true">
+                <comment>Numero de linea</comment>
+            </column>
+        </property>
+        <property name="unitas" type="big_decimal">
+            <column name="unitas" precision="13" scale="3">
+                <comment>Unidades para tasacion</comment>
+            </column>
+        </property>
+        <property name="import_" type="big_decimal">
+            <column name="import" precision="9">
+                <comment>Importe sujeto a IVA</comment>
+            </column>
+        </property>
+        <property name="perseg" type="big_decimal">
+            <column name="perseg" precision="5">
+                <comment>Porc. seguro</comment>
+            </column>
+        </property>
+        <property name="seguro" type="big_decimal">
+            <column name="seguro" precision="7">
+                <comment>Seguro</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

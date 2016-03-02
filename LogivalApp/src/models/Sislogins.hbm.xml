@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 23-feb-2016 11:32:04 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="models.Sislogins" table="sislogins">
+        <composite-id name="id" class="models.SisloginsId">
+            <key-property name="clogin" type="string">
+                <column name="clogin" length="5" />
+            </key-property>
+            <key-property name="contra" type="string">
+                <column name="contra" length="5" />
+            </key-property>
+            <key-property name="captur" type="java.lang.Character">
+                <column name="captur" length="1" />
+            </key-property>
+            <key-property name="enviar" type="java.lang.Character">
+                <column name="enviar" length="1" />
+            </key-property>
+            <key-property name="sislog" type="string">
+                <column name="sislog" length="7" />
+            </key-property>
+            <key-property name="nombre" type="string">
+                <column name="nombre" length="30" />
+            </key-property>
+            <key-property name="dirlec" type="string">
+                <column name="dirlec" length="50" />
+            </key-property>
+            <key-property name="diresc" type="string">
+                <column name="diresc" length="50" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

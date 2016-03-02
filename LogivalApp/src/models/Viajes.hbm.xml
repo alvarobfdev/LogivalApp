@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 23-feb-2016 11:32:04 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="models.Viajes" table="viajes">
+        <composite-id name="id" class="models.ViajesId">
+            <key-property name="codemp" type="short">
+                <column name="codemp" />
+            </key-property>
+            <key-property name="coddel" type="short">
+                <column name="coddel" />
+            </key-property>
+            <key-property name="ejevia" type="short">
+                <column name="ejevia" />
+            </key-property>
+            <key-property name="numvia" type="int">
+                <column name="numvia" />
+            </key-property>
+        </composite-id>
+        <property name="fecvia" type="date">
+            <column name="fecvia" length="10" not-null="true">
+                <comment>Fecha Viaje</comment>
+            </column>
+        </property>
+        <property name="numveh" type="short">
+            <column name="numveh" not-null="true">
+                <comment>Vehiculo</comment>
+            </column>
+        </property>
+        <property name="codtra" type="java.lang.Short">
+            <column name="codtra">
+                <comment>Codigo Transportista</comment>
+            </column>
+        </property>
+        <property name="fecliq" type="date">
+            <column name="fecliq" length="10">
+                <comment>Fecha Liquidacion</comment>
+            </column>
+        </property>
+        <property name="fecenv" type="date">
+            <column name="fecenv" length="10">
+                <comment>Fecha de envio</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 23-feb-2016 11:32:04 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="models.Pickped" table="pickped">
+        <composite-id name="id" class="models.PickpedId">
+            <key-property name="refped" type="string">
+                <column name="refped" length="25" />
+            </key-property>
+            <key-property name="email" type="string">
+                <column name="email" length="100" />
+            </key-property>
+            <key-property name="mobile" type="string">
+                <column name="mobile" length="15" />
+            </key-property>
+            <key-property name="idpickp" type="string">
+                <column name="idpickp" length="6" />
+            </key-property>
+            <key-property name="lgadr1" type="string">
+                <column name="lgadr1" length="40" />
+            </key-property>
+            <key-property name="lgadr2" type="string">
+                <column name="lgadr2" length="40" />
+            </key-property>
+            <key-property name="lgadr3" type="string">
+                <column name="lgadr3" length="40" />
+            </key-property>
+            <key-property name="lgadr4" type="string">
+                <column name="lgadr4" length="40" />
+            </key-property>
+            <key-property name="cppick" type="string">
+                <column name="cppick" length="5" />
+            </key-property>
+            <key-property name="city" type="string">
+                <column name="city" length="40" />
+            </key-property>
+            <key-property name="pais" type="string">
+                <column name="pais" length="3" />
+            </key-property>
+            <key-property name="numexp" type="string">
+                <column name="numexp" length="8" />
+            </key-property>
+            <key-property name="agencia" type="string">
+                <column name="agencia" length="4" />
+            </key-property>
+            <key-property name="grupo" type="string">
+                <column name="grupo" length="3" />
+            </key-property>
+            <key-property name="navette" type="string">
+                <column name="navette" length="6" />
+            </key-property>
+            <key-property name="nomage" type="string">
+                <column name="nomage" length="30" />
+            </key-property>
+            <key-property name="ruta" type="string">
+                <column name="ruta" length="5" />
+            </key-property>
+            <key-property name="modent" type="string">
+                <column name="modent" length="3" />
+            </key-property>
+            <key-property name="codebar" type="string">
+                <column name="codebar" length="26" />
+            </key-property>
+            <key-property name="reembo" type="big_decimal">
+                <column name="reembo" precision="9" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

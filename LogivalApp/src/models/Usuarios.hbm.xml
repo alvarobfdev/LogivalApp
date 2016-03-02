@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 23-feb-2016 11:32:04 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="models.Usuarios" table="usuarios">
+        <composite-id name="id" class="models.UsuariosId">
+            <key-property name="codemp" type="short">
+                <column name="codemp" />
+            </key-property>
+            <key-property name="coddel" type="short">
+                <column name="coddel" />
+            </key-property>
+            <key-property name="nomusu" type="string">
+                <column name="nomusu" length="12" />
+            </key-property>
+            <key-property name="claacc" type="string">
+                <column name="claacc" length="12" />
+            </key-property>
+            <key-property name="cloper" type="string">
+                <column name="cloper" length="2" />
+            </key-property>
+            <key-property name="nivope" type="short">
+                <column name="nivope" />
+            </key-property>
+            <key-property name="tipins" type="char">
+                <column name="tipins" length="1" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

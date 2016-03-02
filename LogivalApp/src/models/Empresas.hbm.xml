@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 23-feb-2016 11:32:04 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="models.Empresas" table="empresas">
+        <id name="codemp" type="short">
+            <column name="codemp" />
+            <generator class="assigned" />
+        </id>
+        <property name="nomemp" type="string">
+            <column name="nomemp" length="40" not-null="true">
+                <comment>Nombre</comment>
+            </column>
+        </property>
+        <property name="cifdni" type="string">
+            <column name="cifdni" length="15" not-null="true">
+                <comment>N.I.F.</comment>
+            </column>
+        </property>
+        <property name="domfis" type="string">
+            <column name="domfis" length="40" not-null="true">
+                <comment>Domicilio Fiscal</comment>
+            </column>
+        </property>
+        <property name="codpos" type="java.lang.Integer">
+            <column name="codpos">
+                <comment>C&#194;&#162;digo Postal</comment>
+            </column>
+        </property>
+        <property name="pobfis" type="string">
+            <column name="pobfis" length="20" not-null="true">
+                <comment>Poblaci&#194;&#162;n Fiscal</comment>
+            </column>
+        </property>
+        <property name="provin" type="java.lang.Short">
+            <column name="provin">
+                <comment>Provincia</comment>
+            </column>
+        </property>
+        <property name="pais" type="java.lang.Short">
+            <column name="pais">
+                <comment>Pa&#194;&#161;s</comment>
+            </column>
+        </property>
+        <property name="telefo" type="string">
+            <column name="telefo" length="14">
+                <comment>Telefono</comment>
+            </column>
+        </property>
+        <property name="telefx" type="string">
+            <column name="telefx" length="14">
+                <comment>Telefax</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

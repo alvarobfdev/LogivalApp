@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 23-feb-2016 11:32:04 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="models.Prefactu" table="prefactu">
+        <composite-id name="id" class="models.PrefactuId">
+            <key-property name="codcli" type="java.lang.Short">
+                <column name="codcli" />
+            </key-property>
+            <key-property name="aplica" type="string">
+                <column name="aplica" length="2" />
+            </key-property>
+            <key-property name="bastar" type="string">
+                <column name="bastar" length="3" />
+            </key-property>
+            <key-property name="numtar" type="java.lang.Short">
+                <column name="numtar" />
+            </key-property>
+            <key-property name="tipcal" type="java.lang.Character">
+                <column name="tipcal" length="1" />
+            </key-property>
+            <key-property name="diacal" type="java.lang.Short">
+                <column name="diacal" />
+            </key-property>
+            <key-property name="grufac" type="java.lang.Character">
+                <column name="grufac" length="1" />
+            </key-property>
+            <key-property name="dtofac" type="big_decimal">
+                <column name="dtofac" precision="5" />
+            </key-property>
+            <key-property name="coddel" type="java.lang.Short">
+                <column name="coddel" />
+            </key-property>
+            <key-property name="omitir" type="java.lang.Character">
+                <column name="omitir" length="1" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

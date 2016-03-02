@@ -1,0 +1,125 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 23-feb-2016 11:32:04 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="models.Cabfactu" table="cabfactu">
+        <composite-id name="id" class="models.CabfactuId">
+            <key-property name="codemp" type="short">
+                <column name="codemp" />
+            </key-property>
+            <key-property name="cenfac" type="short">
+                <column name="cenfac" />
+            </key-property>
+            <key-property name="serfac" type="char">
+                <column name="serfac" length="1" />
+            </key-property>
+            <key-property name="ejefac" type="short">
+                <column name="ejefac" />
+            </key-property>
+            <key-property name="numfac" type="int">
+                <column name="numfac" />
+            </key-property>
+        </composite-id>
+        <property name="fecfac" type="date">
+            <column name="fecfac" length="10">
+                <comment>Fecha de Factura</comment>
+            </column>
+        </property>
+        <property name="codcli" type="short">
+            <column name="codcli" not-null="true">
+                <comment>Codigo Cliente</comment>
+            </column>
+        </property>
+        <property name="codter" type="string">
+            <column name="codter" length="12">
+                <comment>Codigo Cliente Tercero</comment>
+            </column>
+        </property>
+        <property name="nif" type="string">
+            <column name="nif" length="15">
+                <comment>N.I.F.</comment>
+            </column>
+        </property>
+        <property name="nomcli" type="string">
+            <column name="nomcli" length="40">
+                <comment>Nombre Cliente</comment>
+            </column>
+        </property>
+        <property name="domici" type="string">
+            <column name="domici" length="40">
+                <comment>Domicilio Cliente</comment>
+            </column>
+        </property>
+        <property name="poblac" type="string">
+            <column name="poblac" length="20">
+                <comment>Poblacion</comment>
+            </column>
+        </property>
+        <property name="codpos" type="java.lang.Integer">
+            <column name="codpos">
+                <comment>Codigo Postal</comment>
+            </column>
+        </property>
+        <property name="pais" type="java.lang.Short">
+            <column name="pais">
+                <comment>Pais</comment>
+            </column>
+        </property>
+        <property name="provin" type="java.lang.Short">
+            <column name="provin">
+                <comment>Provincia</comment>
+            </column>
+        </property>
+        <property name="impbru" type="big_decimal">
+            <column name="impbru" precision="10">
+                <comment>Importe Bruto</comment>
+            </column>
+        </property>
+        <property name="dtofac" type="big_decimal">
+            <column name="dtofac" precision="5">
+                <comment>% dto. en factura</comment>
+            </column>
+        </property>
+        <property name="impdfac" type="big_decimal">
+            <column name="impdfac" precision="8">
+                <comment>Importe dto. factura</comment>
+            </column>
+        </property>
+        <property name="basiva" type="big_decimal">
+            <column name="basiva" precision="10">
+                <comment>Base imponible</comment>
+            </column>
+        </property>
+        <property name="tipiva" type="big_decimal">
+            <column name="tipiva" precision="5">
+                <comment>Tipo de IVA</comment>
+            </column>
+        </property>
+        <property name="impiva" type="big_decimal">
+            <column name="impiva" precision="8">
+                <comment>Cuota de IVA</comment>
+            </column>
+        </property>
+        <property name="totfac" type="big_decimal">
+            <column name="totfac" precision="10">
+                <comment>Total Factura</comment>
+            </column>
+        </property>
+        <property name="forpag" type="string">
+            <column name="forpag" length="3">
+                <comment>Forma de pago</comment>
+            </column>
+        </property>
+        <property name="indctb" type="java.lang.Character">
+            <column name="indctb" length="1">
+                <comment>Situacion contable</comment>
+            </column>
+        </property>
+        <property name="observ" type="string">
+            <column name="observ" length="30">
+                <comment>Observaciones</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

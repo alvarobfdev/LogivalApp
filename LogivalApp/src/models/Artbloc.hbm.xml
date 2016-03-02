@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 23-feb-2016 11:32:04 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="models.Artbloc" table="artbloc">
+        <composite-id name="id" class="models.ArtblocId">
+            <key-property name="codigo" type="string">
+                <column name="codigo" length="20" />
+            </key-property>
+            <key-property name="descri" type="string">
+                <column name="descri" length="50" />
+            </key-property>
+            <key-property name="numlin" type="int">
+                <column name="numlin" />
+            </key-property>
+            <key-property name="oldcod" type="string">
+                <column name="oldcod" length="20" />
+            </key-property>
+            <key-property name="codcli" type="java.lang.Short">
+                <column name="codcli" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

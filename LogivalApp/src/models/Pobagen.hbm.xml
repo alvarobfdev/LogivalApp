@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 23-feb-2016 11:32:04 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="models.Pobagen" table="pobagen">
+        <composite-id name="id" class="models.PobagenId">
+            <key-property name="numero" type="int">
+                <column name="numero" />
+            </key-property>
+            <key-property name="codemp" type="short">
+                <column name="codemp" />
+            </key-property>
+            <key-property name="coddel" type="short">
+                <column name="coddel" />
+            </key-property>
+            <key-property name="codplz" type="short">
+                <column name="codplz" />
+            </key-property>
+        </composite-id>
+        <property name="plztas" type="java.lang.Short">
+            <column name="plztas">
+                <comment>Agencia tasac.</comment>
+            </column>
+        </property>
+        <property name="aplrxp" type="char">
+            <column name="aplrxp" length="1" not-null="true">
+                <comment>Apl. reexp.</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

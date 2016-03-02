@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 23-feb-2016 11:32:04 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="models.CondicTasacion" table="condic_tasacion">
+        <composite-id name="id" class="models.CondicTasacionId">
+            <key-property name="codemp" type="short">
+                <column name="codemp" />
+            </key-property>
+            <key-property name="coddel" type="short">
+                <column name="coddel" />
+            </key-property>
+            <key-property name="codcli" type="short">
+                <column name="codcli" />
+            </key-property>
+            <key-property name="aplica" type="string">
+                <column name="aplica" length="2" />
+            </key-property>
+            <key-property name="bastar" type="string">
+                <column name="bastar" length="3" />
+            </key-property>
+        </composite-id>
+        <property name="numtar" type="java.lang.Short">
+            <column name="numtar">
+                <comment>Numero de tarifa</comment>
+            </column>
+        </property>
+        <property name="tipcal" type="java.lang.Character">
+            <column name="tipcal" length="1">
+                <comment>Tipo de calculo</comment>
+            </column>
+        </property>
+        <property name="grufac" type="java.lang.Character">
+            <column name="grufac" length="1">
+                <comment>Grupo de facturacion</comment>
+            </column>
+        </property>
+        <property name="basdia" type="java.lang.Short">
+            <column name="basdia">
+                <comment>Tarifa picking (CP)</comment>
+            </column>
+        </property>
+        <property name="dtofac" type="big_decimal">
+            <column name="dtofac" precision="5">
+                <comment>Descuento en factura</comment>
+            </column>
+        </property>
+        <property name="perseg" type="big_decimal">
+            <column name="perseg" precision="5">
+                <comment>Porc. seguro</comment>
+            </column>
+        </property>
+        <property name="minseg" type="big_decimal">
+            <column name="minseg" precision="7">
+                <comment>Importe minimo seguro</comment>
+            </column>
+        </property>
+        <property name="equkm3" type="java.lang.Integer">
+            <column name="equkm3">
+                <comment>Equivalencia Kgs/M3</comment>
+            </column>
+        </property>
+        <property name="aplcge" type="string">
+            <column name="aplcge" length="14">
+                <comment>Apl. C.G. por defecto</comment>
+            </column>
+        </property>
+        <property name="minser" type="big_decimal">
+            <column name="minser" precision="7">
+                <comment>Importe min. servicio</comment>
+            </column>
+        </property>
+        <property name="artlin" type="java.lang.Character">
+            <column name="artlin" length="1">
+                <comment>Ind. detalle:art./lin.</comment>
+            </column>
+        </property>
+        <property name="valdet" type="big_decimal">
+            <column name="valdet" precision="7" scale="3">
+                <comment>Importe detalle</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

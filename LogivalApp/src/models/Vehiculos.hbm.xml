@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 23-feb-2016 11:32:04 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="models.Vehiculos" table="vehiculos">
+        <composite-id name="id" class="models.VehiculosId">
+            <key-property name="codemp" type="short">
+                <column name="codemp" />
+            </key-property>
+            <key-property name="numveh" type="short">
+                <column name="numveh" />
+            </key-property>
+        </composite-id>
+        <property name="cifdni" type="string">
+            <column name="cifdni" length="15" not-null="true">
+                <comment>N.I.F.</comment>
+            </column>
+        </property>
+        <property name="nombre" type="string">
+            <column name="nombre" length="40" not-null="true">
+                <comment>Nombre</comment>
+            </column>
+        </property>
+        <property name="domici" type="string">
+            <column name="domici" length="40" not-null="true">
+                <comment>Domicilio</comment>
+            </column>
+        </property>
+        <property name="codpos" type="java.lang.Integer">
+            <column name="codpos">
+                <comment>C.Postal</comment>
+            </column>
+        </property>
+        <property name="poblac" type="string">
+            <column name="poblac" length="20" not-null="true">
+                <comment>Poblaci&#194;&#162;n</comment>
+            </column>
+        </property>
+        <property name="provin" type="java.lang.Short">
+            <column name="provin">
+                <comment>Provincia</comment>
+            </column>
+        </property>
+        <property name="pais" type="java.lang.Short">
+            <column name="pais">
+                <comment>Pa&#194;&#161;s</comment>
+            </column>
+        </property>
+        <property name="telefo" type="string">
+            <column name="telefo" length="14">
+                <comment>Telefono</comment>
+            </column>
+        </property>
+        <property name="telefx" type="string">
+            <column name="telefx" length="14">
+                <comment>Telefax</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

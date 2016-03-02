@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 23-feb-2016 11:32:04 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="models.Reembolsos" table="reembolsos">
+        <composite-id name="id" class="models.ReembolsosId">
+            <key-property name="codemp" type="short">
+                <column name="codemp" />
+            </key-property>
+            <key-property name="coddel" type="short">
+                <column name="coddel" />
+            </key-property>
+            <key-property name="codcli" type="short">
+                <column name="codcli" />
+            </key-property>
+            <key-property name="tipalb" type="char">
+                <column name="tipalb" length="1" />
+            </key-property>
+            <key-property name="seralb" type="char">
+                <column name="seralb" length="1" />
+            </key-property>
+            <key-property name="ejerci" type="short">
+                <column name="ejerci" />
+            </key-property>
+            <key-property name="numalb" type="int">
+                <column name="numalb" />
+            </key-property>
+            <key-property name="codtra" type="java.lang.Short">
+                <column name="codtra" />
+            </key-property>
+            <key-property name="fecalb" type="date">
+                <column name="fecalb" length="10" />
+            </key-property>
+            <key-property name="fecexp" type="date">
+                <column name="fecexp" length="10" />
+            </key-property>
+            <key-property name="feccob" type="date">
+                <column name="feccob" length="10" />
+            </key-property>
+            <key-property name="fecliq" type="date">
+                <column name="fecliq" length="10" />
+            </key-property>
+            <key-property name="codliq" type="java.lang.Character">
+                <column name="codliq" length="1" />
+            </key-property>
+            <key-property name="reembo" type="big_decimal">
+                <column name="reembo" precision="9" />
+            </key-property>
+            <key-property name="observ" type="string">
+                <column name="observ" length="40" />
+            </key-property>
+            <key-property name="cenfac" type="java.lang.Short">
+                <column name="cenfac" />
+            </key-property>
+            <key-property name="serfac" type="java.lang.Character">
+                <column name="serfac" length="1" />
+            </key-property>
+            <key-property name="ejefac" type="java.lang.Short">
+                <column name="ejefac" />
+            </key-property>
+            <key-property name="numfac" type="java.lang.Integer">
+                <column name="numfac" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

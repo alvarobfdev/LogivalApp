@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 23-feb-2016 11:32:04 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="models.Linrepartos" table="linrepartos">
+        <composite-id name="id" class="models.LinrepartosId">
+            <key-property name="codemp" type="short">
+                <column name="codemp" />
+            </key-property>
+            <key-property name="coddel" type="short">
+                <column name="coddel" />
+            </key-property>
+            <key-property name="ejevue" type="short">
+                <column name="ejevue" />
+            </key-property>
+            <key-property name="numero" type="int">
+                <column name="numero" />
+            </key-property>
+            <key-property name="numlin" type="short">
+                <column name="numlin" />
+            </key-property>
+            <key-property name="codcli" type="short">
+                <column name="codcli" />
+            </key-property>
+            <key-property name="seralb" type="string">
+                <column name="seralb" length="2" />
+            </key-property>
+            <key-property name="ejerci" type="short">
+                <column name="ejerci" />
+            </key-property>
+            <key-property name="numalb" type="int">
+                <column name="numalb" />
+            </key-property>
+            <key-property name="reembo" type="big_decimal">
+                <column name="reembo" precision="9" />
+            </key-property>
+            <key-property name="estado" type="java.lang.Character">
+                <column name="estado" length="1" />
+            </key-property>
+            <key-property name="observ" type="string">
+                <column name="observ" length="30" />
+            </key-property>
+            <key-property name="tipalb" type="java.lang.Character">
+                <column name="tipalb" length="1" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

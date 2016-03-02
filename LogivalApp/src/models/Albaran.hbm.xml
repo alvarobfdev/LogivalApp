@@ -1,0 +1,251 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 23-feb-2016 11:32:04 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="models.Albaran" table="albaran">
+        <composite-id name="id" class="models.AlbaranId">
+            <key-property name="codemp" type="short">
+                <column name="codemp" />
+            </key-property>
+            <key-property name="coddel" type="short">
+                <column name="coddel" />
+            </key-property>
+            <key-property name="codcli" type="short">
+                <column name="codcli" />
+            </key-property>
+            <key-property name="tipalb" type="char">
+                <column name="tipalb" length="1" />
+            </key-property>
+            <key-property name="seralb" type="string">
+                <column name="seralb" length="2" />
+            </key-property>
+            <key-property name="ejerci" type="short">
+                <column name="ejerci" />
+            </key-property>
+            <key-property name="numalb" type="int">
+                <column name="numalb" />
+            </key-property>
+        </composite-id>
+        <property name="cenfac" type="java.lang.Short">
+            <column name="cenfac">
+                <comment>Centro Facturacion</comment>
+            </column>
+        </property>
+        <property name="serfac" type="java.lang.Character">
+            <column name="serfac" length="1">
+                <comment>Serie Factura</comment>
+            </column>
+        </property>
+        <property name="ejefac" type="java.lang.Short">
+            <column name="ejefac">
+                <comment>A&#194;&#164;o Factura</comment>
+            </column>
+        </property>
+        <property name="numfac" type="java.lang.Integer">
+            <column name="numfac">
+                <comment>N&#194;&#163;mero Factura</comment>
+            </column>
+        </property>
+        <property name="indrep" type="java.lang.Character">
+            <column name="indrep" length="1">
+                <comment>Indicativo reparto</comment>
+            </column>
+        </property>
+        <property name="fecalb" type="date">
+            <column name="fecalb" length="10" not-null="true">
+                <comment>Fecha Albar&#194;&#160;n</comment>
+            </column>
+        </property>
+        <property name="fecexp" type="date">
+            <column name="fecexp" length="10">
+                <comment>Fecha expedici&#194;&#162;n</comment>
+            </column>
+        </property>
+        <property name="totbul" type="java.lang.Integer">
+            <column name="totbul">
+                <comment>Total bultos</comment>
+            </column>
+        </property>
+        <property name="totkil" type="big_decimal">
+            <column name="totkil" precision="8">
+                <comment>Total kilos</comment>
+            </column>
+        </property>
+        <property name="totvol" type="big_decimal">
+            <column name="totvol" precision="8" scale="3">
+                <comment>Total volumen</comment>
+            </column>
+        </property>
+        <property name="imptot" type="big_decimal">
+            <column name="imptot" precision="9">
+                <comment>Importe total</comment>
+            </column>
+        </property>
+        <property name="reembo" type="big_decimal">
+            <column name="reembo" precision="9">
+                <comment>Reembolso</comment>
+            </column>
+        </property>
+        <property name="ejevia" type="java.lang.Short">
+            <column name="ejevia">
+                <comment>Ejercicio Viaje</comment>
+            </column>
+        </property>
+        <property name="numvia" type="java.lang.Integer">
+            <column name="numvia">
+                <comment>Numero de Viaje</comment>
+            </column>
+        </property>
+        <property name="cloper" type="string">
+            <column name="cloper" length="2">
+                <comment>Operador</comment>
+            </column>
+        </property>
+        <property name="nomter" type="string">
+            <column name="nomter" length="50">
+                <comment>Nombre Cliente Tercero</comment>
+            </column>
+        </property>
+        <property name="dirter" type="string">
+            <column name="dirter" length="50">
+                <comment>Direcci&#194;&#162;n Cliente Tercero</comment>
+            </column>
+        </property>
+        <property name="pobter" type="string">
+            <column name="pobter" length="40">
+                <comment>Poblaci&#194;&#162;n Cliente Tercero</comment>
+            </column>
+        </property>
+        <property name="cpoter" type="java.lang.Integer">
+            <column name="cpoter">
+                <comment>C.P. Cliente Tercero</comment>
+            </column>
+        </property>
+        <property name="codter" type="string">
+            <column name="codter" length="12">
+                <comment>Codigo Cliente Tercero</comment>
+            </column>
+        </property>
+        <property name="inddis" type="java.lang.Character">
+            <column name="inddis" length="1">
+                <comment>Indic. distribucion</comment>
+            </column>
+        </property>
+        <property name="barrxp" type="java.lang.Character">
+            <column name="barrxp" length="1">
+                <comment>Baremo Distribucion</comment>
+            </column>
+        </property>
+        <property name="grupo" type="java.lang.Short">
+            <column name="grupo">
+                <comment>Grupo de tarifa</comment>
+            </column>
+        </property>
+        <property name="impdis" type="big_decimal">
+            <column name="impdis" precision="9">
+                <comment>Importe distribucion</comment>
+            </column>
+        </property>
+        <property name="indedi" type="java.lang.Character">
+            <column name="indedi" length="1">
+                <comment>Indic. edicion (S/N)</comment>
+            </column>
+        </property>
+        <property name="observ" type="string">
+            <column name="observ" length="77">
+                <comment>Observaciones</comment>
+            </column>
+        </property>
+        <property name="codtra" type="java.lang.Short">
+            <column name="codtra">
+                <comment>Transportista</comment>
+            </column>
+        </property>
+        <property name="serped" type="string">
+            <column name="serped" length="2">
+                <comment>Serie pedido origen</comment>
+            </column>
+        </property>
+        <property name="ejeped" type="java.lang.Short">
+            <column name="ejeped">
+                <comment>Ejerc. pedido origen</comment>
+            </column>
+        </property>
+        <property name="numped" type="java.lang.Integer">
+            <column name="numped">
+                <comment>Numero pedido origen</comment>
+            </column>
+        </property>
+        <property name="estado" type="java.lang.Character">
+            <column name="estado" length="1">
+                <comment>Estado documento</comment>
+            </column>
+        </property>
+        <property name="envweb" type="java.lang.Character">
+            <column name="envweb" length="1">
+                <comment>Envio web</comment>
+            </column>
+        </property>
+        <property name="totpal" type="java.lang.Short">
+            <column name="totpal">
+                <comment>Total palets</comment>
+            </column>
+        </property>
+        <property name="pobdis" type="string">
+            <column name="pobdis" length="30">
+                <comment>Poblacion para distr.</comment>
+            </column>
+        </property>
+        <property name="cpodis" type="java.lang.Integer">
+            <column name="cpodis">
+                <comment>C.P. Distribucion</comment>
+            </column>
+        </property>
+        <property name="ejeope" type="java.lang.Short">
+            <column name="ejeope">
+                <comment>Ejercicio Operacion</comment>
+            </column>
+        </property>
+        <property name="numope" type="java.lang.Integer">
+            <column name="numope">
+                <comment>Numero Operacion</comment>
+            </column>
+        </property>
+        <property name="finope" type="java.lang.Character">
+            <column name="finope" length="1">
+                <comment>Operacion Finalizada</comment>
+            </column>
+        </property>
+        <property name="docref" type="string">
+            <column name="docref" length="25">
+                <comment>Documento referencia</comment>
+            </column>
+        </property>
+        <property name="anyexp" type="java.lang.Short">
+            <column name="anyexp">
+                <comment>A&#194;&#164;o expedici&#194;&#162;n</comment>
+            </column>
+        </property>
+        <property name="numexp" type="java.lang.Long">
+            <column name="numexp" precision="11" scale="0">
+                <comment>N&#194;&#163;mero expedici&#194;&#162;n</comment>
+            </column>
+        </property>
+        <property name="fecent" type="date">
+            <column name="fecent" length="10">
+                <comment>Fecha entrega</comment>
+            </column>
+        </property>
+        <property name="idetkt" type="string">
+            <column name="idetkt" length="20">
+                <comment>Numero EDI</comment>
+            </column>
+        </property>
+        <property name="copias" type="java.lang.Short">
+            <column name="copias">
+                <comment>Num. copias a imprimir</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

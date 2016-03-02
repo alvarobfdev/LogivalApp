@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 23-feb-2016 11:32:04 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="models.Pueblos" table="pueblos">
+        <composite-id name="id" class="models.PueblosId">
+            <key-property name="codigo" type="java.lang.Integer">
+                <column name="codigo" />
+            </key-property>
+            <key-property name="nompob" type="string">
+                <column name="nompob" length="40" />
+            </key-property>
+            <key-property name="ruta" type="string">
+                <column name="ruta" length="30" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

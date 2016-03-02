@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 23-feb-2016 11:32:04 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="models.Sisuustat" table="sisuustat">
+        <composite-id name="id" class="models.SisuustatId">
+            <key-property name="sislog" type="string">
+                <column name="sislog" length="7" />
+            </key-property>
+            <key-property name="nomjob" type="string">
+                <column name="nomjob" length="11" />
+            </key-property>
+            <key-property name="tipjob" type="java.lang.Character">
+                <column name="tipjob" length="1" />
+            </key-property>
+            <key-property name="fecjob" type="date">
+                <column name="fecjob" length="10" />
+            </key-property>
+            <key-property name="horjob" type="time">
+                <column name="horjob" length="8" />
+            </key-property>
+            <key-property name="archiv" type="string">
+                <column name="archiv" length="70" />
+            </key-property>
+            <key-property name="orides" type="string">
+                <column name="orides" length="70" />
+            </key-property>
+            <key-property name="borjob" type="java.lang.Character">
+                <column name="borjob" length="1" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

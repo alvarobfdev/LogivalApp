@@ -1,0 +1,119 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 23-feb-2016 11:32:04 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="models.Linpedidos" table="linpedidos">
+        <composite-id name="id" class="models.LinpedidosId">
+            <key-property name="codemp" type="short">
+                <column name="codemp" />
+            </key-property>
+            <key-property name="coddel" type="short">
+                <column name="coddel" />
+            </key-property>
+            <key-property name="codcli" type="short">
+                <column name="codcli" />
+            </key-property>
+            <key-property name="tipped" type="char">
+                <column name="tipped" length="1" />
+            </key-property>
+            <key-property name="serped" type="string">
+                <column name="serped" length="2" />
+            </key-property>
+            <key-property name="ejeped" type="short">
+                <column name="ejeped" />
+            </key-property>
+            <key-property name="numped" type="int">
+                <column name="numped" />
+            </key-property>
+            <key-property name="numlin" type="short">
+                <column name="numlin" />
+            </key-property>
+        </composite-id>
+        <property name="codart" type="string">
+            <column name="codart" length="20" not-null="true">
+                <comment>Articulo</comment>
+            </column>
+        </property>
+        <property name="cantid" type="big_decimal">
+            <column name="cantid" precision="9" scale="3" not-null="true">
+                <comment>Cantidad</comment>
+            </column>
+        </property>
+        <property name="bultos" type="short">
+            <column name="bultos" not-null="true">
+                <comment>Bultos</comment>
+            </column>
+        </property>
+        <property name="kilos" type="big_decimal">
+            <column name="kilos" precision="8" scale="3" not-null="true">
+                <comment>Kilos</comment>
+            </column>
+        </property>
+        <property name="volume" type="big_decimal">
+            <column name="volume" precision="7" scale="3">
+                <comment>Volumen</comment>
+            </column>
+        </property>
+        <property name="precio" type="big_decimal">
+            <column name="precio" precision="9">
+                <comment>Precio Unitario</comment>
+            </column>
+        </property>
+        <property name="dtoli1" type="big_decimal">
+            <column name="dtoli1" precision="5">
+                <comment>Dto. s/pr. unit. 1</comment>
+            </column>
+        </property>
+        <property name="dtoli2" type="big_decimal">
+            <column name="dtoli2" precision="5">
+                <comment>Dto. s/pr. unit. 2</comment>
+            </column>
+        </property>
+        <property name="descri" type="string">
+            <column name="descri" length="40">
+                <comment>Descripcion</comment>
+            </column>
+        </property>
+        <property name="estado" type="java.lang.Character">
+            <column name="estado" length="1">
+                <comment>Situacion linea</comment>
+            </column>
+        </property>
+        <property name="tipdoc" type="java.lang.Character">
+            <column name="tipdoc" length="1">
+                <comment>Valor P para reservas</comment>
+            </column>
+        </property>
+        <property name="tipiva" type="big_decimal">
+            <column name="tipiva" precision="5">
+                <comment>Tipo IVA</comment>
+            </column>
+        </property>
+        <property name="edilin" type="java.lang.Character">
+            <column name="edilin" length="1">
+                <comment>Edita linea alb (S/N)</comment>
+            </column>
+        </property>
+        <property name="asocia" type="java.lang.Short">
+            <column name="asocia">
+                <comment>Codigo asociacion</comment>
+            </column>
+        </property>
+        <property name="nopick" type="java.lang.Integer">
+            <column name="nopick">
+                <comment>Num orden picking</comment>
+            </column>
+        </property>
+        <property name="lnpick" type="java.lang.Short">
+            <column name="lnpick">
+                <comment>Num linea picking</comment>
+            </column>
+        </property>
+        <property name="codkit" type="string">
+            <column name="codkit" length="20">
+                <comment>Codigo kit/raiz</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

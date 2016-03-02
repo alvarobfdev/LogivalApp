@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 23-feb-2016 11:32:04 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="models.Cpostal" table="cpostal">
+        <composite-id name="id" class="models.CpostalId">
+            <key-property name="codpos" type="java.lang.Integer">
+                <column name="codpos" />
+            </key-property>
+            <key-property name="nompob" type="string">
+                <column name="nompob" length="50" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 23-feb-2016 11:32:04 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="models.Articul" table="articul">
+        <id name="codigo" type="string">
+            <column name="codigo" length="20" />
+            <generator class="assigned" />
+        </id>
+        <property name="dscart" type="string">
+            <column name="dscart" length="50" not-null="true" />
+        </property>
+        <property name="pdtser" type="big_decimal">
+            <column name="pdtser" precision="11" scale="3" />
+        </property>
+        <property name="pdtrec" type="big_decimal">
+            <column name="pdtrec" precision="11" scale="3" />
+        </property>
+    </class>
+</hibernate-mapping>

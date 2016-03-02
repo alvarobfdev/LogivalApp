@@ -1,0 +1,96 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 23-feb-2016 11:32:04 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="models.Recpedi" table="recpedi">
+        <composite-id name="id" class="models.RecpediId">
+            <key-property name="codemp" type="short">
+                <column name="codemp" />
+            </key-property>
+            <key-property name="coddel" type="short">
+                <column name="coddel" />
+            </key-property>
+            <key-property name="codcli" type="short">
+                <column name="codcli" />
+            </key-property>
+            <key-property name="tipped" type="char">
+                <column name="tipped" length="1" />
+            </key-property>
+            <key-property name="serped" type="string">
+                <column name="serped" length="2" />
+            </key-property>
+            <key-property name="ejeped" type="short">
+                <column name="ejeped" />
+            </key-property>
+            <key-property name="numped" type="int">
+                <column name="numped" />
+            </key-property>
+        </composite-id>
+        <property name="fecped" type="date">
+            <column name="fecped" length="10" not-null="true">
+                <comment>Fecha Pedido</comment>
+            </column>
+        </property>
+        <property name="indser" type="java.lang.Character">
+            <column name="indser" length="1">
+                <comment>Serv. parcial/completo</comment>
+            </column>
+        </property>
+        <property name="reserv" type="java.lang.Character">
+            <column name="reserv" length="1">
+                <comment>Reserv. articulos(S/N)</comment>
+            </column>
+        </property>
+        <property name="fecent" type="date">
+            <column name="fecent" length="10">
+                <comment>Fecha Entrega</comment>
+            </column>
+        </property>
+        <property name="fecrec" type="date">
+            <column name="fecrec" length="10">
+                <comment>Fecha Recepcion</comment>
+            </column>
+        </property>
+        <property name="horrec" type="time">
+            <column name="horrec" length="8">
+                <comment>Hora Recepcion</comment>
+            </column>
+        </property>
+        <property name="modent" type="java.lang.Character">
+            <column name="modent" length="1">
+                <comment>Modo entrada (A/M)</comment>
+            </column>
+        </property>
+        <property name="fecanu" type="date">
+            <column name="fecanu" length="10">
+                <comment>Fecha anulacion</comment>
+            </column>
+        </property>
+        <property name="horanu" type="time">
+            <column name="horanu" length="8">
+                <comment>Hora anulacion</comment>
+            </column>
+        </property>
+        <property name="obsadm" type="string">
+            <column name="obsadm" length="50">
+                <comment>Observaciones admin.</comment>
+            </column>
+        </property>
+        <property name="transp" type="string">
+            <column name="transp" length="30">
+                <comment>Transportista</comment>
+            </column>
+        </property>
+        <property name="tippor" type="java.lang.Character">
+            <column name="tippor" length="1">
+                <comment>Tipo de portes</comment>
+            </column>
+        </property>
+        <property name="codinc" type="java.lang.Short">
+            <column name="codinc">
+                <comment>Codigo incidencia</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

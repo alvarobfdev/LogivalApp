@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 23-feb-2016 11:32:04 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="models.Zonaswka" table="zonaswka">
+        <composite-id name="id" class="models.ZonaswkaId">
+            <key-property name="codemp" type="short">
+                <column name="codemp" />
+            </key-property>
+            <key-property name="coddel" type="short">
+                <column name="coddel" />
+            </key-property>
+            <key-property name="codcli" type="short">
+                <column name="codcli" />
+            </key-property>
+            <key-property name="ejedoc" type="java.lang.Short">
+                <column name="ejedoc" />
+            </key-property>
+            <key-property name="numdoc" type="java.lang.Integer">
+                <column name="numdoc" />
+            </key-property>
+            <key-property name="tipalb" type="char">
+                <column name="tipalb" length="1" />
+            </key-property>
+            <key-property name="seralb" type="string">
+                <column name="seralb" length="2" />
+            </key-property>
+            <key-property name="ejerci" type="short">
+                <column name="ejerci" />
+            </key-property>
+            <key-property name="numalb" type="int">
+                <column name="numalb" />
+            </key-property>
+            <key-property name="numlin" type="short">
+                <column name="numlin" />
+            </key-property>
+            <key-property name="codart" type="string">
+                <column name="codart" length="20" />
+            </key-property>
+            <key-property name="descri" type="string">
+                <column name="descri" length="40" />
+            </key-property>
+            <key-property name="ctlser" type="java.lang.Character">
+                <column name="ctlser" length="1" />
+            </key-property>
+            <key-property name="cantid" type="big_decimal">
+                <column name="cantid" precision="9" scale="3" />
+            </key-property>
+            <key-property name="bultos" type="short">
+                <column name="bultos" />
+            </key-property>
+            <key-property name="kilos" type="big_decimal">
+                <column name="kilos" precision="7" />
+            </key-property>
+            <key-property name="volume" type="big_decimal">
+                <column name="volume" precision="7" scale="3" />
+            </key-property>
+            <key-property name="palets" type="java.lang.Short">
+                <column name="palets" />
+            </key-property>
+            <key-property name="horizo" type="string">
+                <column name="horizo" length="2" />
+            </key-property>
+            <key-property name="vertic" type="java.lang.Short">
+                <column name="vertic" />
+            </key-property>
+            <key-property name="fcaduc" type="date">
+                <column name="fcaduc" length="10" />
+            </key-property>
+            <key-property name="lotefb" type="string">
+                <column name="lotefb" length="20" />
+            </key-property>
+            <key-property name="nserie" type="string">
+                <column name="nserie" length="20" />
+            </key-property>
+            <key-property name="indica" type="java.lang.Character">
+                <column name="indica" length="1" />
+            </key-property>
+            <key-property name="canmov" type="big_decimal">
+                <column name="canmov" precision="9" scale="3" />
+            </key-property>
+            <key-property name="ctlcad" type="java.lang.Character">
+                <column name="ctlcad" length="1" />
+            </key-property>
+            <key-property name="ctllot" type="java.lang.Character">
+                <column name="ctllot" length="1" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

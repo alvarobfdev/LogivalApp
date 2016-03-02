@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 23-feb-2016 11:32:04 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="models.Picking" table="picking">
+        <composite-id name="id" class="models.PickingId">
+            <key-property name="sesionid" type="int">
+                <column name="sesionid" />
+            </key-property>
+            <key-property name="sesionln" type="short">
+                <column name="sesionln" />
+            </key-property>
+            <key-property name="pedidono" type="int">
+                <column name="pedidono" />
+            </key-property>
+            <key-property name="pedidoln" type="short">
+                <column name="pedidoln" />
+            </key-property>
+            <key-property name="numorden" type="java.lang.Short">
+                <column name="numorden" />
+            </key-property>
+            <key-property name="fechaped" type="date">
+                <column name="fechaped" length="10" />
+            </key-property>
+            <key-property name="fechaent" type="date">
+                <column name="fechaent" length="10" />
+            </key-property>
+            <key-property name="codigokt" type="string">
+                <column name="codigokt" length="20" />
+            </key-property>
+            <key-property name="codigoar" type="string">
+                <column name="codigoar" length="20" />
+            </key-property>
+            <key-property name="descrip" type="string">
+                <column name="descrip" length="40" />
+            </key-property>
+            <key-property name="canpedi" type="java.lang.Integer">
+                <column name="canpedi" />
+            </key-property>
+            <key-property name="canserv" type="java.lang.Integer">
+                <column name="canserv" />
+            </key-property>
+            <key-property name="lotefb" type="string">
+                <column name="lotefb" length="10" />
+            </key-property>
+            <key-property name="horizo" type="string">
+                <column name="horizo" length="15" />
+            </key-property>
+            <key-property name="vertic" type="string">
+                <column name="vertic" length="15" />
+            </key-property>
+            <key-property name="nomcli" type="string">
+                <column name="nomcli" length="50" />
+            </key-property>
+            <key-property name="orgcli" type="string">
+                <column name="orgcli" length="50" />
+            </key-property>
+            <key-property name="loccli" type="string">
+                <column name="loccli" length="50" />
+            </key-property>
+            <key-property name="domcli1" type="string">
+                <column name="domcli1" length="50" />
+            </key-property>
+            <key-property name="domcli2" type="string">
+                <column name="domcli2" length="50" />
+            </key-property>
+            <key-property name="domcli3" type="string">
+                <column name="domcli3" length="50" />
+            </key-property>
+            <key-property name="pobcli" type="string">
+                <column name="pobcli" length="50" />
+            </key-property>
+            <key-property name="prvcli" type="string">
+                <column name="prvcli" length="50" />
+            </key-property>
+            <key-property name="cpocli" type="string">
+                <column name="cpocli" length="10" />
+            </key-property>
+            <key-property name="paicli" type="string">
+                <column name="paicli" length="50" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

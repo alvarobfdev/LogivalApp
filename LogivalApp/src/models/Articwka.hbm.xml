@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 23-feb-2016 11:32:04 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="models.Articwka" table="articwka">
+        <composite-id name="id" class="models.ArticwkaId">
+            <key-property name="codemp" type="short">
+                <column name="codemp" />
+            </key-property>
+            <key-property name="coddel" type="short">
+                <column name="coddel" />
+            </key-property>
+            <key-property name="ejerci" type="short">
+                <column name="ejerci" />
+            </key-property>
+            <key-property name="numdoc" type="int">
+                <column name="numdoc" />
+            </key-property>
+            <key-property name="codart" type="string">
+                <column name="codart" length="20" />
+            </key-property>
+            <key-property name="descri" type="string">
+                <column name="descri" length="40" />
+            </key-property>
+            <key-property name="codbar" type="string">
+                <column name="codbar" length="30" />
+            </key-property>
+            <key-property name="indica" type="java.lang.Character">
+                <column name="indica" length="1" />
+            </key-property>
+            <key-property name="ctlser" type="java.lang.Character">
+                <column name="ctlser" length="1" />
+            </key-property>
+            <key-property name="ctlcad" type="java.lang.Character">
+                <column name="ctlcad" length="1" />
+            </key-property>
+            <key-property name="ctllot" type="java.lang.Character">
+                <column name="ctllot" length="1" />
+            </key-property>
+            <key-property name="peso" type="big_decimal">
+                <column name="peso" precision="7" scale="3" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

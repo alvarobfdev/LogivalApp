@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 23-feb-2016 11:32:04 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="models.Paises" table="paises">
+        <id name="pais" type="short">
+            <column name="pais" />
+            <generator class="assigned" />
+        </id>
+        <property name="nombre" type="string">
+            <column name="nombre" length="30" not-null="true" unique="true">
+                <comment>Pa&#194;&#161;s</comment>
+            </column>
+        </property>
+        <property name="ranpro" type="java.lang.Short">
+            <column name="ranpro">
+                <comment>Rango Provincias</comment>
+            </column>
+        </property>
+        <property name="rancpo" type="java.lang.Integer">
+            <column name="rancpo">
+                <comment>Rango Cod. Postales</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

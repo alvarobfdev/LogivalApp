@@ -1,0 +1,179 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 23-feb-2016 11:32:04 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="models.Lin2006" table="lin2006">
+        <composite-id name="id" class="models.Lin2006Id">
+            <key-property name="codemp" type="short">
+                <column name="codemp" />
+            </key-property>
+            <key-property name="coddel" type="short">
+                <column name="coddel" />
+            </key-property>
+            <key-property name="codcli" type="short">
+                <column name="codcli" />
+            </key-property>
+            <key-property name="tipalb" type="char">
+                <column name="tipalb" length="1" />
+            </key-property>
+            <key-property name="seralb" type="string">
+                <column name="seralb" length="2" />
+            </key-property>
+            <key-property name="ejerci" type="short">
+                <column name="ejerci" />
+            </key-property>
+            <key-property name="numalb" type="int">
+                <column name="numalb" />
+            </key-property>
+            <key-property name="numlin" type="short">
+                <column name="numlin" />
+            </key-property>
+        </composite-id>
+        <property name="codart" type="string">
+            <column name="codart" length="20" not-null="true">
+                <comment>Art&#194;&#161;culo</comment>
+            </column>
+        </property>
+        <property name="cantid" type="big_decimal">
+            <column name="cantid" precision="9" scale="3" not-null="true">
+                <comment>Cantidad</comment>
+            </column>
+        </property>
+        <property name="bultos" type="short">
+            <column name="bultos" not-null="true">
+                <comment>Bultos</comment>
+            </column>
+        </property>
+        <property name="kilos" type="big_decimal">
+            <column name="kilos" precision="7" not-null="true">
+                <comment>Kilos</comment>
+            </column>
+        </property>
+        <property name="volume" type="big_decimal">
+            <column name="volume" precision="7" scale="3">
+                <comment>Volumen</comment>
+            </column>
+        </property>
+        <property name="precio" type="big_decimal">
+            <column name="precio" precision="9">
+                <comment>Precio Unitario</comment>
+            </column>
+        </property>
+        <property name="fecalb" type="date">
+            <column name="fecalb" length="10" not-null="true">
+                <comment>Fecha movimiento</comment>
+            </column>
+        </property>
+        <property name="fcaduc" type="date">
+            <column name="fcaduc" length="10">
+                <comment>Fecha de caducidad</comment>
+            </column>
+        </property>
+        <property name="horizo" type="string">
+            <column name="horizo" length="2">
+                <comment>Coordenada horizontal</comment>
+            </column>
+        </property>
+        <property name="vertic" type="java.lang.Short">
+            <column name="vertic">
+                <comment>Coordenada vertical</comment>
+            </column>
+        </property>
+        <property name="baralm" type="java.lang.Character">
+            <column name="baralm" length="1">
+                <comment>Baremo Almacenaje</comment>
+            </column>
+        </property>
+        <property name="udsalm" type="big_decimal">
+            <column name="udsalm" precision="10" scale="3">
+                <comment>Unidades Almacenaje</comment>
+            </column>
+        </property>
+        <property name="basalm" type="string">
+            <column name="basalm" length="3">
+                <comment>Base tarifa almacenaje</comment>
+            </column>
+        </property>
+        <property name="lotefb" type="string">
+            <column name="lotefb" length="20">
+                <comment>Lote de fabricacion</comment>
+            </column>
+        </property>
+        <property name="tipemb" type="string">
+            <column name="tipemb" length="3">
+                <comment>Tipo embalaje</comment>
+            </column>
+        </property>
+        <property name="dtoli1" type="big_decimal">
+            <column name="dtoli1" precision="5">
+                <comment>Dto. s/pr. unitario</comment>
+            </column>
+        </property>
+        <property name="dtoli2" type="big_decimal">
+            <column name="dtoli2" precision="5">
+                <comment>Dto. s/pr. unitario 2</comment>
+            </column>
+        </property>
+        <property name="descri" type="string">
+            <column name="descri" length="40">
+                <comment>Descripcion</comment>
+            </column>
+        </property>
+        <property name="serped" type="string">
+            <column name="serped" length="2">
+                <comment>Serie pedido origen</comment>
+            </column>
+        </property>
+        <property name="ejeped" type="java.lang.Short">
+            <column name="ejeped">
+                <comment>Ejerc. pedido origen</comment>
+            </column>
+        </property>
+        <property name="numped" type="java.lang.Integer">
+            <column name="numped">
+                <comment>Numero pedido origen</comment>
+            </column>
+        </property>
+        <property name="linped" type="java.lang.Short">
+            <column name="linped">
+                <comment>Linea pedido origen</comment>
+            </column>
+        </property>
+        <property name="estado" type="java.lang.Character">
+            <column name="estado" length="1">
+                <comment>Estado de la linea</comment>
+            </column>
+        </property>
+        <property name="palets" type="java.lang.Short">
+            <column name="palets">
+                <comment>Palets</comment>
+            </column>
+        </property>
+        <property name="nserie" type="string">
+            <column name="nserie" length="20">
+                <comment>Numero de serie artic.</comment>
+            </column>
+        </property>
+        <property name="idsscc" type="string">
+            <column name="idsscc" length="18">
+                <comment>Identificador SSCC</comment>
+            </column>
+        </property>
+        <property name="nopick" type="java.lang.Integer">
+            <column name="nopick">
+                <comment>Num. orden picking</comment>
+            </column>
+        </property>
+        <property name="lnpick" type="java.lang.Short">
+            <column name="lnpick">
+                <comment>Num. linea picking</comment>
+            </column>
+        </property>
+        <property name="codkit" type="string">
+            <column name="codkit" length="20">
+                <comment>Codigo kit/raiz</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 23-feb-2016 11:32:04 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="models.Servlpe" table="servlpe">
+        <composite-id name="id" class="models.ServlpeId">
+            <key-property name="ntermi" type="java.lang.Short">
+                <column name="ntermi" />
+            </key-property>
+            <key-property name="codcli" type="java.lang.Short">
+                <column name="codcli" />
+            </key-property>
+            <key-property name="serped" type="string">
+                <column name="serped" length="2" />
+            </key-property>
+            <key-property name="ejeped" type="java.lang.Short">
+                <column name="ejeped" />
+            </key-property>
+            <key-property name="numped" type="java.lang.Integer">
+                <column name="numped" />
+            </key-property>
+            <key-property name="numlin" type="java.lang.Short">
+                <column name="numlin" />
+            </key-property>
+            <key-property name="codart" type="string">
+                <column name="codart" length="20" />
+            </key-property>
+            <key-property name="canped" type="big_decimal">
+                <column name="canped" precision="11" scale="3" />
+            </key-property>
+            <key-property name="canrsv" type="big_decimal">
+                <column name="canrsv" precision="11" scale="3" />
+            </key-property>
+            <key-property name="canstk" type="big_decimal">
+                <column name="canstk" precision="11" scale="3" />
+            </key-property>
+            <key-property name="servok" type="java.lang.Character">
+                <column name="servok" length="1" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

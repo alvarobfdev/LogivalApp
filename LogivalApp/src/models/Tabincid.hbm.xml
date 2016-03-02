@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 23-feb-2016 11:32:04 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="models.Tabincid" table="tabincid">
+        <composite-id name="id" class="models.TabincidId">
+            <key-property name="codemp" type="java.lang.Short">
+                <column name="codemp" />
+            </key-property>
+            <key-property name="codcli" type="java.lang.Short">
+                <column name="codcli" />
+            </key-property>
+            <key-property name="codinc" type="java.lang.Short">
+                <column name="codinc" />
+            </key-property>
+            <key-property name="dscinc" type="string">
+                <column name="dscinc" length="50" />
+            </key-property>
+            <key-property name="txtfij" type="java.lang.Character">
+                <column name="txtfij" length="1" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

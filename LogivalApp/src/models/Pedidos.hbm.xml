@@ -1,0 +1,186 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 23-feb-2016 11:32:04 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="models.Pedidos" table="pedidos">
+        <composite-id name="id" class="models.PedidosId">
+            <key-property name="codemp" type="short">
+                <column name="codemp" />
+            </key-property>
+            <key-property name="coddel" type="short">
+                <column name="coddel" />
+            </key-property>
+            <key-property name="codcli" type="short">
+                <column name="codcli" />
+            </key-property>
+            <key-property name="tipped" type="char">
+                <column name="tipped" length="1" />
+            </key-property>
+            <key-property name="serped" type="string">
+                <column name="serped" length="2" />
+            </key-property>
+            <key-property name="ejeped" type="short">
+                <column name="ejeped" />
+            </key-property>
+            <key-property name="numped" type="int">
+                <column name="numped" />
+            </key-property>
+        </composite-id>
+        <property name="fecped" type="date">
+            <column name="fecped" length="10" not-null="true">
+                <comment>Fecha Pedido</comment>
+            </column>
+        </property>
+        <property name="inddis" type="java.lang.Character">
+            <column name="inddis" length="1">
+                <comment>Indic. distribucion</comment>
+            </column>
+        </property>
+        <property name="totbul" type="java.lang.Short">
+            <column name="totbul">
+                <comment>Total bultos</comment>
+            </column>
+        </property>
+        <property name="totkil" type="big_decimal">
+            <column name="totkil" precision="8">
+                <comment>Total kilos</comment>
+            </column>
+        </property>
+        <property name="totvol" type="big_decimal">
+            <column name="totvol" precision="8" scale="3">
+                <comment>Total volumen</comment>
+            </column>
+        </property>
+        <property name="reembo" type="big_decimal">
+            <column name="reembo" precision="9">
+                <comment>Reembolso</comment>
+            </column>
+        </property>
+        <property name="imptot" type="big_decimal">
+            <column name="imptot" precision="9">
+                <comment>Importe total</comment>
+            </column>
+        </property>
+        <property name="nomtec" type="string">
+            <column name="nomtec" length="50">
+                <comment>Remitente/Consignatari</comment>
+            </column>
+        </property>
+        <property name="dirtec" type="string">
+            <column name="dirtec" length="50">
+                <comment>Domicilio</comment>
+            </column>
+        </property>
+        <property name="pobtec" type="string">
+            <column name="pobtec" length="40">
+                <comment>Poblacion</comment>
+            </column>
+        </property>
+        <property name="cpotec" type="java.lang.Integer">
+            <column name="cpotec">
+                <comment>C. Postal</comment>
+            </column>
+        </property>
+        <property name="codtec" type="string">
+            <column name="codtec" length="12">
+                <comment>Codigo tercero</comment>
+            </column>
+        </property>
+        <property name="observ" type="string">
+            <column name="observ" length="77">
+                <comment>Observaciones</comment>
+            </column>
+        </property>
+        <property name="transp" type="string">
+            <column name="transp" length="30">
+                <comment>Transportista</comment>
+            </column>
+        </property>
+        <property name="indser" type="java.lang.Character">
+            <column name="indser" length="1">
+                <comment>Serv. parcial/completo</comment>
+            </column>
+        </property>
+        <property name="reserv" type="java.lang.Character">
+            <column name="reserv" length="1">
+                <comment>Reserv. articulos(S/N)</comment>
+            </column>
+        </property>
+        <property name="fecent" type="date">
+            <column name="fecent" length="10">
+                <comment>Fecha Entrega</comment>
+            </column>
+        </property>
+        <property name="estado" type="java.lang.Character">
+            <column name="estado" length="1">
+                <comment>Situacion pedido</comment>
+            </column>
+        </property>
+        <property name="envweb" type="java.lang.Character">
+            <column name="envweb" length="1">
+                <comment>Enviado web</comment>
+            </column>
+        </property>
+        <property name="pobdis" type="string">
+            <column name="pobdis" length="30">
+                <comment>Poblacion distrib.</comment>
+            </column>
+        </property>
+        <property name="cpodis" type="java.lang.Integer">
+            <column name="cpodis">
+                <comment>C.P. distribucion</comment>
+            </column>
+        </property>
+        <property name="nomfis" type="string">
+            <column name="nomfis" length="50">
+                <comment>Nombre fiscal C/P</comment>
+            </column>
+        </property>
+        <property name="refped" type="string">
+            <column name="refped" length="25">
+                <comment>Referencia pedido</comment>
+            </column>
+        </property>
+        <property name="valora" type="java.lang.Character">
+            <column name="valora" length="1">
+                <comment>Valorado (S/N)</comment>
+            </column>
+        </property>
+        <property name="apliva" type="java.lang.Character">
+            <column name="apliva" length="1">
+                <comment>Aplica IVA (N/T/L)</comment>
+            </column>
+        </property>
+        <property name="tipiva" type="big_decimal">
+            <column name="tipiva" precision="5">
+                <comment>Tipo de IVA</comment>
+            </column>
+        </property>
+        <property name="ejeope" type="java.lang.Short">
+            <column name="ejeope">
+                <comment>Ejercicio operacion</comment>
+            </column>
+        </property>
+        <property name="numope" type="java.lang.Integer">
+            <column name="numope">
+                <comment>Numero operacion</comment>
+            </column>
+        </property>
+        <property name="finope" type="java.lang.Character">
+            <column name="finope" length="1">
+                <comment>Finaliza operacion</comment>
+            </column>
+        </property>
+        <property name="txtven" type="string">
+            <column name="txtven" length="40">
+                <comment>Texto ventanilla</comment>
+            </column>
+        </property>
+        <property name="okpick" type="string">
+            <column name="okpick" length="4">
+                <comment>Id. traspasos bombas</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

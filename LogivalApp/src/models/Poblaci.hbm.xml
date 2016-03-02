@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 23-feb-2016 11:32:04 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="models.Poblaci" table="poblaci">
+        <id name="nombre" type="string">
+            <column name="nombre" length="20" />
+            <generator class="assigned" />
+        </id>
+        <property name="numero" type="int">
+            <column name="numero" not-null="true">
+                <comment>Numero</comment>
+            </column>
+        </property>
+        <property name="pais" type="short">
+            <column name="pais" not-null="true">
+                <comment>Pais</comment>
+            </column>
+        </property>
+        <property name="provin" type="short">
+            <column name="provin" not-null="true">
+                <comment>Provincia</comment>
+            </column>
+        </property>
+        <property name="cpoini" type="java.lang.Integer">
+            <column name="cpoini">
+                <comment>Desde C.P.</comment>
+            </column>
+        </property>
+        <property name="cpofin" type="java.lang.Integer">
+            <column name="cpofin">
+                <comment>Hasta C.P.</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

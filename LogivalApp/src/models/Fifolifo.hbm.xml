@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 23-feb-2016 11:32:04 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="models.Fifolifo" table="fifolifo">
+        <composite-id name="id" class="models.FifolifoId">
+            <key-property name="codemp" type="short">
+                <column name="codemp" />
+            </key-property>
+            <key-property name="coddel" type="short">
+                <column name="coddel" />
+            </key-property>
+            <key-property name="codcli" type="short">
+                <column name="codcli" />
+            </key-property>
+            <key-property name="codart" type="string">
+                <column name="codart" length="20" />
+            </key-property>
+            <key-property name="fecent" type="date">
+                <column name="fecent" length="10" />
+            </key-property>
+            <key-property name="horizo" type="string">
+                <column name="horizo" length="2" />
+            </key-property>
+            <key-property name="vertic" type="short">
+                <column name="vertic" />
+            </key-property>
+            <key-property name="udsart" type="big_decimal">
+                <column name="udsart" precision="11" scale="3" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

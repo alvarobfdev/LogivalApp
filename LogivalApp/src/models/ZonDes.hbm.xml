@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 23-feb-2016 11:32:04 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="models.ZonDes" table="zon_des">
+        <composite-id name="id" class="models.ZonDesId">
+            <key-property name="norden" type="java.lang.Integer">
+                <column name="norden" />
+            </key-property>
+            <key-property name="cantid" type="java.lang.Integer">
+                <column name="cantid" />
+            </key-property>
+            <key-property name="udsalm" type="big_decimal">
+                <column name="udsalm" precision="10" scale="3" />
+            </key-property>
+            <key-property name="horizo" type="string">
+                <column name="horizo" length="2" />
+            </key-property>
+            <key-property name="vertic" type="java.lang.Short">
+                <column name="vertic" />
+            </key-property>
+            <key-property name="sublin" type="int">
+                <column name="sublin" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

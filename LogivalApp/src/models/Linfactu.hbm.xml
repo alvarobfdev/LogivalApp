@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 23-feb-2016 11:32:04 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="models.Linfactu" table="linfactu">
+        <composite-id name="id" class="models.LinfactuId">
+            <key-property name="codemp" type="short">
+                <column name="codemp" />
+            </key-property>
+            <key-property name="cenfac" type="short">
+                <column name="cenfac" />
+            </key-property>
+            <key-property name="serfac" type="char">
+                <column name="serfac" length="1" />
+            </key-property>
+            <key-property name="ejefac" type="short">
+                <column name="ejefac" />
+            </key-property>
+            <key-property name="numfac" type="int">
+                <column name="numfac" />
+            </key-property>
+            <key-property name="numlin" type="short">
+                <column name="numlin" />
+            </key-property>
+        </composite-id>
+        <property name="aplica" type="string">
+            <column name="aplica" length="2" not-null="true">
+                <comment>Servicio Aplicacion</comment>
+            </column>
+        </property>
+        <property name="feccal" type="date">
+            <column name="feccal" length="10" not-null="true">
+                <comment>Fecha Calculo</comment>
+            </column>
+        </property>
+        <property name="descri" type="string">
+            <column name="descri" length="40">
+                <comment>Descripcion</comment>
+            </column>
+        </property>
+        <property name="bastar" type="string">
+            <column name="bastar" length="3">
+                <comment>Base Aplicaci&#194;&#162;n</comment>
+            </column>
+        </property>
+        <property name="unitas" type="big_decimal">
+            <column name="unitas" precision="13" scale="3">
+                <comment>Unidades para tasacion</comment>
+            </column>
+        </property>
+        <property name="import_" type="big_decimal">
+            <column name="import" precision="9">
+                <comment>Importe sujeto a IVA</comment>
+            </column>
+        </property>
+        <property name="docref" type="string">
+            <column name="docref" length="20">
+                <comment>Documento referencia</comment>
+            </column>
+        </property>
+        <property name="perseg" type="big_decimal">
+            <column name="perseg" precision="5">
+                <comment>Porc. seguro</comment>
+            </column>
+        </property>
+        <property name="seguro" type="big_decimal">
+            <column name="seguro" precision="7">
+                <comment>Seguro</comment>
+            </column>
+        </property>
+        <property name="tipalb" type="java.lang.Character">
+            <column name="tipalb" length="1">
+                <comment>Tipo albaran (E/S)</comment>
+            </column>
+        </property>
+        <property name="txtadi" type="string">
+            <column name="txtadi" length="40">
+                <comment>Texto adicional</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

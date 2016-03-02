@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 23-feb-2016 11:32:04 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="models.Servicios" table="servicios">
+        <composite-id name="id" class="models.ServiciosId">
+            <key-property name="codemp" type="short">
+                <column name="codemp" />
+            </key-property>
+            <key-property name="aplica" type="string">
+                <column name="aplica" length="2" />
+            </key-property>
+        </composite-id>
+        <property name="dscapl" type="string">
+            <column name="dscapl" length="30" not-null="true">
+                <comment>Descripcion del servicio</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 23-feb-2016 11:32:04 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="models.GrupTarif" table="grup_tarif">
+        <composite-id name="id" class="models.GrupTarifId">
+            <key-property name="codemp" type="short">
+                <column name="codemp" />
+            </key-property>
+            <key-property name="grupo" type="short">
+                <column name="grupo" />
+            </key-property>
+            <key-property name="dscgru" type="string">
+                <column name="dscgru" length="30" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

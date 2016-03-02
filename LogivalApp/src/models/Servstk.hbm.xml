@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 23-feb-2016 11:32:04 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="models.Servstk" table="servstk">
+        <composite-id name="id" class="models.ServstkId">
+            <key-property name="ntermi" type="java.lang.Short">
+                <column name="ntermi" />
+            </key-property>
+            <key-property name="codcli" type="java.lang.Short">
+                <column name="codcli" />
+            </key-property>
+            <key-property name="codart" type="string">
+                <column name="codart" length="20" />
+            </key-property>
+            <key-property name="stkdsp" type="big_decimal">
+                <column name="stkdsp" precision="11" scale="3" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

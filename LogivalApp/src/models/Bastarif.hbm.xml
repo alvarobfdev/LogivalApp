@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 23-feb-2016 11:32:04 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="models.Bastarif" table="bastarif">
+        <composite-id name="id" class="models.BastarifId">
+            <key-property name="codemp" type="short">
+                <column name="codemp" />
+            </key-property>
+            <key-property name="aplica" type="string">
+                <column name="aplica" length="2" />
+            </key-property>
+            <key-property name="bastar" type="string">
+                <column name="bastar" length="3" />
+            </key-property>
+            <key-property name="dscbas" type="string">
+                <column name="dscbas" length="30" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

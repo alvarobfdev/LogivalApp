@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 23-feb-2016 11:32:04 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="models.ArtLin" table="art_lin">
+        <composite-id name="id" class="models.ArtLinId">
+            <key-property name="codart" type="string">
+                <column name="codart" length="20" />
+            </key-property>
+            <key-property name="cantid" type="java.lang.Integer">
+                <column name="cantid" />
+            </key-property>
+            <key-property name="udsalm" type="big_decimal">
+                <column name="udsalm" precision="10" scale="3" />
+            </key-property>
+            <key-property name="bultos" type="java.lang.Short">
+                <column name="bultos" />
+            </key-property>
+            <key-property name="kilos" type="big_decimal">
+                <column name="kilos" precision="7" />
+            </key-property>
+            <key-property name="volume" type="big_decimal">
+                <column name="volume" precision="7" scale="3" />
+            </key-property>
+            <key-property name="lotefb" type="string">
+                <column name="lotefb" length="10" />
+            </key-property>
+            <key-property name="fcaduc" type="date">
+                <column name="fcaduc" length="10" />
+            </key-property>
+            <key-property name="norden" type="java.lang.Integer">
+                <column name="norden" />
+            </key-property>
+            <key-property name="sublin" type="int">
+                <column name="sublin" />
+            </key-property>
+            <key-property name="seralb" type="java.lang.Character">
+                <column name="seralb" length="1" />
+            </key-property>
+            <key-property name="numalb" type="java.lang.Integer">
+                <column name="numalb" />
+            </key-property>
+            <key-property name="numlin" type="java.lang.Short">
+                <column name="numlin" />
+            </key-property>
+            <key-property name="horizo" type="string">
+                <column name="horizo" length="2" />
+            </key-property>
+            <key-property name="vertic" type="java.lang.Short">
+                <column name="vertic" />
+            </key-property>
+            <key-property name="indret" type="java.lang.Character">
+                <column name="indret" length="1" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

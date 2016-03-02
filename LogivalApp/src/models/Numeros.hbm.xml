@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 23-feb-2016 11:32:04 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="models.Numeros" table="numeros">
+        <composite-id name="id" class="models.NumerosId">
+            <key-property name="codemp" type="short">
+                <column name="codemp" />
+            </key-property>
+            <key-property name="coddel" type="short">
+                <column name="coddel" />
+            </key-property>
+            <key-property name="ejerci" type="short">
+                <column name="ejerci" />
+            </key-property>
+            <key-property name="clanum" type="string">
+                <column name="clanum" length="3" />
+            </key-property>
+            <key-property name="numero" type="java.lang.Integer">
+                <column name="numero" />
+            </key-property>
+            <key-property name="limite" type="java.lang.Integer">
+                <column name="limite" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

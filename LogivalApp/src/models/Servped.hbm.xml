@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 23-feb-2016 11:32:04 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="models.Servped" table="servped">
+        <composite-id name="id" class="models.ServpedId">
+            <key-property name="ntermi" type="java.lang.Short">
+                <column name="ntermi" />
+            </key-property>
+            <key-property name="codcli" type="java.lang.Short">
+                <column name="codcli" />
+            </key-property>
+            <key-property name="norden" type="java.lang.Short">
+                <column name="norden" />
+            </key-property>
+            <key-property name="fecped" type="date">
+                <column name="fecped" length="10" />
+            </key-property>
+            <key-property name="fecent" type="date">
+                <column name="fecent" length="10" />
+            </key-property>
+            <key-property name="serped" type="string">
+                <column name="serped" length="2" />
+            </key-property>
+            <key-property name="ejeped" type="java.lang.Short">
+                <column name="ejeped" />
+            </key-property>
+            <key-property name="numped" type="java.lang.Integer">
+                <column name="numped" />
+            </key-property>
+            <key-property name="reserv" type="java.lang.Character">
+                <column name="reserv" length="1" />
+            </key-property>
+            <key-property name="indser" type="java.lang.Character">
+                <column name="indser" length="1" />
+            </key-property>
+            <key-property name="servok" type="java.lang.Character">
+                <column name="servok" length="1" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

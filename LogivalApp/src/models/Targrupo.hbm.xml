@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 23-feb-2016 11:32:04 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="models.Targrupo" table="targrupo">
+        <composite-id name="id" class="models.TargrupoId">
+            <key-property name="codemp" type="short">
+                <column name="codemp" />
+            </key-property>
+            <key-property name="coddel" type="short">
+                <column name="coddel" />
+            </key-property>
+            <key-property name="numtar" type="short">
+                <column name="numtar" />
+            </key-property>
+            <key-property name="aplica" type="string">
+                <column name="aplica" length="2" />
+            </key-property>
+            <key-property name="feclim" type="date">
+                <column name="feclim" length="10" />
+            </key-property>
+            <key-property name="grupo" type="short">
+                <column name="grupo" />
+            </key-property>
+        </composite-id>
+        <property name="bardis" type="char">
+            <column name="bardis" length="1" not-null="true">
+                <comment>Baremo Distribucion</comment>
+            </column>
+        </property>
+        <property name="barrxp" type="java.lang.Character">
+            <column name="barrxp" length="1">
+                <comment>Baremo Reexpedicion</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

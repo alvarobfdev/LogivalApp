@@ -1,0 +1,136 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 23-feb-2016 11:32:04 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="models.Acumovi" table="acumovi">
+        <composite-id name="id" class="models.AcumoviId">
+            <key-property name="codemp" type="short">
+                <column name="codemp" />
+            </key-property>
+            <key-property name="ejerci" type="short">
+                <column name="ejerci" />
+            </key-property>
+            <key-property name="coddel" type="short">
+                <column name="coddel" />
+            </key-property>
+            <key-property name="codcli" type="short">
+                <column name="codcli" />
+            </key-property>
+            <key-property name="codart" type="string">
+                <column name="codart" length="20" />
+            </key-property>
+            <key-property name="stkini" type="big_decimal">
+                <column name="stkini" precision="11" scale="3" />
+            </key-property>
+            <key-property name="unie01" type="big_decimal">
+                <column name="unie01" precision="11" scale="3" />
+            </key-property>
+            <key-property name="unie02" type="big_decimal">
+                <column name="unie02" precision="11" scale="3" />
+            </key-property>
+            <key-property name="unie03" type="big_decimal">
+                <column name="unie03" precision="11" scale="3" />
+            </key-property>
+            <key-property name="unie04" type="big_decimal">
+                <column name="unie04" precision="11" scale="3" />
+            </key-property>
+            <key-property name="unie05" type="big_decimal">
+                <column name="unie05" precision="11" scale="3" />
+            </key-property>
+            <key-property name="unie06" type="big_decimal">
+                <column name="unie06" precision="11" scale="3" />
+            </key-property>
+            <key-property name="unie07" type="big_decimal">
+                <column name="unie07" precision="11" scale="3" />
+            </key-property>
+            <key-property name="unie08" type="big_decimal">
+                <column name="unie08" precision="11" scale="3" />
+            </key-property>
+            <key-property name="unie09" type="big_decimal">
+                <column name="unie09" precision="11" scale="3" />
+            </key-property>
+            <key-property name="unie10" type="big_decimal">
+                <column name="unie10" precision="11" scale="3" />
+            </key-property>
+            <key-property name="unie11" type="big_decimal">
+                <column name="unie11" precision="11" scale="3" />
+            </key-property>
+            <key-property name="unie12" type="big_decimal">
+                <column name="unie12" precision="11" scale="3" />
+            </key-property>
+            <key-property name="unis01" type="big_decimal">
+                <column name="unis01" precision="11" scale="3" />
+            </key-property>
+            <key-property name="unis02" type="big_decimal">
+                <column name="unis02" precision="11" scale="3" />
+            </key-property>
+            <key-property name="unis03" type="big_decimal">
+                <column name="unis03" precision="11" scale="3" />
+            </key-property>
+            <key-property name="unis04" type="big_decimal">
+                <column name="unis04" precision="11" scale="3" />
+            </key-property>
+            <key-property name="unis05" type="big_decimal">
+                <column name="unis05" precision="11" scale="3" />
+            </key-property>
+            <key-property name="unis06" type="big_decimal">
+                <column name="unis06" precision="11" scale="3" />
+            </key-property>
+            <key-property name="unis07" type="big_decimal">
+                <column name="unis07" precision="11" scale="3" />
+            </key-property>
+            <key-property name="unis08" type="big_decimal">
+                <column name="unis08" precision="11" scale="3" />
+            </key-property>
+            <key-property name="unis09" type="big_decimal">
+                <column name="unis09" precision="11" scale="3" />
+            </key-property>
+            <key-property name="unis10" type="big_decimal">
+                <column name="unis10" precision="11" scale="3" />
+            </key-property>
+            <key-property name="unis11" type="big_decimal">
+                <column name="unis11" precision="11" scale="3" />
+            </key-property>
+            <key-property name="unis12" type="big_decimal">
+                <column name="unis12" precision="11" scale="3" />
+            </key-property>
+            <key-property name="unir01" type="big_decimal">
+                <column name="unir01" precision="11" scale="3" />
+            </key-property>
+            <key-property name="unir02" type="big_decimal">
+                <column name="unir02" precision="11" scale="3" />
+            </key-property>
+            <key-property name="unir03" type="big_decimal">
+                <column name="unir03" precision="11" scale="3" />
+            </key-property>
+            <key-property name="unir04" type="big_decimal">
+                <column name="unir04" precision="11" scale="3" />
+            </key-property>
+            <key-property name="unir05" type="big_decimal">
+                <column name="unir05" precision="11" scale="3" />
+            </key-property>
+            <key-property name="unir06" type="big_decimal">
+                <column name="unir06" precision="11" scale="3" />
+            </key-property>
+            <key-property name="unir07" type="big_decimal">
+                <column name="unir07" precision="11" scale="3" />
+            </key-property>
+            <key-property name="unir08" type="big_decimal">
+                <column name="unir08" precision="11" scale="3" />
+            </key-property>
+            <key-property name="unir09" type="big_decimal">
+                <column name="unir09" precision="11" scale="3" />
+            </key-property>
+            <key-property name="unir10" type="big_decimal">
+                <column name="unir10" precision="11" scale="3" />
+            </key-property>
+            <key-property name="unir11" type="big_decimal">
+                <column name="unir11" precision="11" scale="3" />
+            </key-property>
+            <key-property name="unir12" type="big_decimal">
+                <column name="unir12" precision="11" scale="3" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>
