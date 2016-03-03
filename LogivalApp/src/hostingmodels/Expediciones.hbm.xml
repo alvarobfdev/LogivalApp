@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 02-mar-2016 10:43:18 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="hostingmodels.Expediciones" table="expediciones" catalog="hosting_logival">
+        <id name="identificador" type="java.lang.Integer">
+            <column name="identificador" />
+            <generator class="identity" />
+        </id>
+        <property name="expedicion" type="int">
+            <column name="expedicion" not-null="true" />
+        </property>
+        <property name="fecha" type="date">
+            <column name="fecha" length="10" not-null="true" />
+        </property>
+        <property name="estado" type="string">
+            <column name="estado" not-null="true" />
+        </property>
+        <property name="imagen" type="string">
+            <column name="imagen" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

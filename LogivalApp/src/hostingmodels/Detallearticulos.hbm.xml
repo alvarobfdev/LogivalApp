@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 02-mar-2016 10:43:18 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="hostingmodels.Detallearticulos" table="detallearticulos" catalog="hosting_logival">
+        <composite-id name="id" class="hostingmodels.DetallearticulosId">
+            <key-property name="codcli" type="short">
+                <column name="codcli" />
+            </key-property>
+            <key-property name="codart" type="string">
+                <column name="codart" length="20" />
+            </key-property>
+            <key-property name="fcaduc" type="date">
+                <column name="fcaduc" length="10" />
+            </key-property>
+            <key-property name="lotefb" type="string">
+                <column name="lotefb" length="20" />
+            </key-property>
+        </composite-id>
+        <property name="descri" type="string">
+            <column name="descri" length="40" not-null="true">
+                <comment>Descripcion</comment>
+            </column>
+        </property>
+        <property name="cantid" type="big_decimal">
+            <column name="cantid" precision="11" scale="3" not-null="true">
+                <comment>Cantidad</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

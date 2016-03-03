@@ -1,0 +1,138 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 02-mar-2016 10:43:18 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="hostingmodels.Albaranes" table="albaranes" catalog="hosting_logival">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="codcli" type="short">
+            <column name="codcli" not-null="true">
+                <comment>Codigo cliente</comment>
+            </column>
+        </property>
+        <property name="tipalb" type="string">
+            <column name="tipalb" length="5">
+                <comment>Tipo Albaran</comment>
+            </column>
+        </property>
+        <property name="seralb" type="string">
+            <column name="seralb" length="2" not-null="true">
+                <comment>Serie albaran</comment>
+            </column>
+        </property>
+        <property name="ejerci" type="short">
+            <column name="ejerci" not-null="true">
+                <comment>Ejercicio Albaran</comment>
+            </column>
+        </property>
+        <property name="numalb" type="int">
+            <column name="numalb" not-null="true">
+                <comment>Numero Albaran</comment>
+            </column>
+        </property>
+        <property name="fecalb" type="date">
+            <column name="fecalb" length="10">
+                <comment>Fecha albaran</comment>
+            </column>
+        </property>
+        <property name="totbul" type="java.lang.Short">
+            <column name="totbul">
+                <comment>Total bultos</comment>
+            </column>
+        </property>
+        <property name="totkil" type="big_decimal">
+            <column name="totkil" precision="8">
+                <comment>Total kilos</comment>
+            </column>
+        </property>
+        <property name="totvol" type="big_decimal">
+            <column name="totvol" precision="8" scale="3">
+                <comment>Total volumen</comment>
+            </column>
+        </property>
+        <property name="totpal" type="java.lang.Short">
+            <column name="totpal">
+                <comment>Total palets</comment>
+            </column>
+        </property>
+        <property name="imptot" type="big_decimal">
+            <column name="imptot" precision="9">
+                <comment>Importe total</comment>
+            </column>
+        </property>
+        <property name="reembo" type="big_decimal">
+            <column name="reembo" precision="9">
+                <comment>Importe reembolso</comment>
+            </column>
+        </property>
+        <property name="nomter" type="string">
+            <column name="nomter" length="50">
+                <comment>Nombre Remitente/Consignatario</comment>
+            </column>
+        </property>
+        <property name="dirter" type="string">
+            <column name="dirter" length="50">
+                <comment>Domicilio Remitente/Consignatario</comment>
+            </column>
+        </property>
+        <property name="pobter" type="string">
+            <column name="pobter" length="40">
+                <comment>Poblacion Remitente/Consignatario</comment>
+            </column>
+        </property>
+        <property name="cpoter" type="java.lang.Integer">
+            <column name="cpoter">
+                <comment>Codigo postal</comment>
+            </column>
+        </property>
+        <property name="codter" type="string">
+            <column name="codter" length="12">
+                <comment>Codigo cliente tercero</comment>
+            </column>
+        </property>
+        <property name="inddis" type="java.lang.Character">
+            <column name="inddis" length="1">
+                <comment>Tipo de portes</comment>
+            </column>
+        </property>
+        <property name="observ" type="string">
+            <column name="observ" length="77">
+                <comment>Observaciones</comment>
+            </column>
+        </property>
+        <property name="nomtra" type="string">
+            <column name="nomtra" length="40">
+                <comment>Transportista</comment>
+            </column>
+        </property>
+        <property name="serped" type="string">
+            <column name="serped" length="2">
+                <comment>Serie pedido</comment>
+            </column>
+        </property>
+        <property name="ejeped" type="java.lang.Short">
+            <column name="ejeped">
+                <comment>Ejercicio pedido</comment>
+            </column>
+        </property>
+        <property name="numped" type="java.lang.Integer">
+            <column name="numped">
+                <comment>Numero pedido</comment>
+            </column>
+        </property>
+        <property name="coddel" type="java.lang.Short">
+            <column name="coddel">
+                <comment>Codigo delegacion</comment>
+            </column>
+        </property>
+        <property name="codtra" type="int">
+            <column name="codtra" not-null="true" />
+        </property>
+        <property name="numexp" type="int">
+            <column name="numexp" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

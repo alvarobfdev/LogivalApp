@@ -8,12 +8,12 @@ import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 
 public class HibernateUtilities {
 
-	private static SessionFactory sessionFactory = buildSessionFactory();
+	private static SessionFactory sessionFactory = null;
 	//private static ServiceRegistry serviceRegistry;
 		
-	private static SessionFactory buildSessionFactory(){
+	private static SessionFactory buildSessionFactory(String cfgXml){
 		try{
-			StandardServiceRegistry standardRegistry = new StandardServiceRegistryBuilder().configure("hibernate-mysql.cfg.xml").build();
+			StandardServiceRegistry standardRegistry = new StandardServiceRegistryBuilder().configure(cfgXml).build();
 			Metadata metadata = new MetadataSources(standardRegistry).getMetadataBuilder().build();
 			return metadata.getSessionFactoryBuilder().build();
 		}catch(HibernateException e){
@@ -22,8 +22,10 @@ public class HibernateUtilities {
 		return sessionFactory;
 	}
 	
-	public static SessionFactory getSessionFactory(){
-		return buildSessionFactory();
+	public static SessionFactory getSessionFactory(String cfgXml){
+		if(sessionFactory == null)
+			sessionFactory = buildSessionFactory(cfgXml);
+		return sessionFactory;
 	}
 	
 	//Versiones anteriores a Hibernate 5

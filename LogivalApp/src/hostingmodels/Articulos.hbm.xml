@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 02-mar-2016 10:43:18 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="hostingmodels.Articulos" table="articulos" catalog="hosting_logival">
+        <composite-id name="id" class="hostingmodels.ArticulosId">
+            <key-property name="codcli" type="short">
+                <column name="codcli" />
+            </key-property>
+            <key-property name="codart" type="string">
+                <column name="codart" length="20" />
+            </key-property>
+        </composite-id>
+        <property name="descri" type="string">
+            <column name="descri" length="40" not-null="true">
+                <comment>Descripcion</comment>
+            </column>
+        </property>
+        <property name="stkfis" type="big_decimal">
+            <column name="stkfis" precision="11" scale="3" not-null="true">
+                <comment>Stock fisico</comment>
+            </column>
+        </property>
+        <property name="stkrsv" type="big_decimal">
+            <column name="stkrsv" precision="11" scale="3" not-null="true">
+                <comment>Stock reservado</comment>
+            </column>
+        </property>
+        <property name="pdtsrv" type="big_decimal">
+            <column name="pdtsrv" precision="11" scale="3" not-null="true">
+                <comment>Pendiente de servir</comment>
+            </column>
+        </property>
+        <property name="stkdis" type="big_decimal">
+            <column name="stkdis" precision="11" scale="3" not-null="true">
+                <comment>Stock Disponible</comment>
+            </column>
+        </property>
+        <property name="pdtrec" type="big_decimal">
+            <column name="pdtrec" precision="11" scale="3" not-null="true">
+                <comment>Pendiente de recibir</comment>
+            </column>
+        </property>
+        <property name="stkcar" type="big_decimal">
+            <column name="stkcar" precision="11" scale="3" not-null="true">
+                <comment>Stock en cartera</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 02-mar-2016 10:43:18 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="hostingmodels.AutenticacionUsuarios" table="autenticacion_usuarios" catalog="hosting_logival">
+        <id name="identificador" type="java.lang.Integer">
+            <column name="identificador" />
+            <generator class="identity" />
+        </id>
+        <property name="username" type="string">
+            <column name="username" not-null="true" />
+        </property>
+        <property name="password" type="string">
+            <column name="password" not-null="true" />
+        </property>
+        <property name="tipoEntidad" type="string">
+            <column name="tipoEntidad" />
+        </property>
+        <property name="idEntidad" type="string">
+            <column name="idEntidad" />
+        </property>
+        <property name="lastLogin" type="java.lang.Integer">
+            <column name="lastLogin" />
+        </property>
+        <property name="loggeado" type="java.lang.Boolean">
+            <column name="loggeado" />
+        </property>
+    </class>
+</hibernate-mapping>

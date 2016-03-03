@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 02-mar-2016 10:43:18 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="hostingmodels.Clientes" table="clientes" catalog="hosting_logival">
+        <id name="identificador" type="java.lang.Integer">
+            <column name="identificador" />
+            <generator class="identity" />
+        </id>
+        <property name="codcli" type="short">
+            <column name="codcli" not-null="true">
+                <comment>Codigo</comment>
+            </column>
+        </property>
+        <property name="nomcli" type="string">
+            <column name="nomcli" length="50">
+                <comment>Nombre</comment>
+            </column>
+        </property>
+        <property name="domcli" type="string">
+            <column name="domcli" length="50">
+                <comment>Domicilio</comment>
+            </column>
+        </property>
+        <property name="pobcli" type="string">
+            <column name="pobcli" length="40">
+                <comment>Poblacion</comment>
+            </column>
+        </property>
+        <property name="cpocli" type="java.lang.Integer">
+            <column name="cpocli">
+                <comment>Codigo Postal</comment>
+            </column>
+        </property>
+        <property name="nomusu" type="string">
+            <column name="nomusu" length="30">
+                <comment>Usuario</comment>
+            </column>
+        </property>
+        <property name="passwd" type="string">
+            <column name="passwd" length="30">
+                <comment>Password</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

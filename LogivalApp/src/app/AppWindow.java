@@ -79,11 +79,11 @@ public class AppWindow {
 		    {
 		    	if(session != null)
 		    		session.close();
-		        HibernateUtilities.getSessionFactory().close();
+		        HibernateUtilities.getSessionFactory("hibernate-mysql.cfg.xml").close();
 		    }
 		});
 		
-		session = HibernateUtilities.getSessionFactory().openSession();
+		session = HibernateUtilities.getSessionFactory("hibernate-mysql.cfg.xml").openSession();
 		
 		panels = new HashMap<String, MyJPanel>();
 		frame = new JFrame();

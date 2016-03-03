@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 02-mar-2016 10:43:18 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="hostingmodels.I18nLocales" table="I18N_locales" catalog="hosting_logival">
+        <id name="identificador" type="java.lang.Integer">
+            <column name="identificador" />
+            <generator class="identity" />
+        </id>
+        <property name="codigo" type="string">
+            <column name="codigo" not-null="true" />
+        </property>
+        <property name="idioma" type="string">
+            <column name="idioma" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

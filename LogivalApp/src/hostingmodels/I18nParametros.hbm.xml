@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 02-mar-2016 10:43:18 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="hostingmodels.I18nParametros" table="I18N_parametros" catalog="hosting_logival">
+        <id name="identificador" type="java.lang.Integer">
+            <column name="identificador" />
+            <generator class="identity" />
+        </id>
+        <property name="key" type="string">
+            <column name="key" length="65535" not-null="true" />
+        </property>
+        <property name="tipoEditor" type="string">
+            <column name="tipoEditor" />
+        </property>
+        <property name="longitudMinima" type="string">
+            <column name="longitudMinima" />
+        </property>
+        <property name="longitudMaxima" type="string">
+            <column name="longitudMaxima" />
+        </property>
+        <property name="editableEnLinea" type="string">
+            <column name="editableEnLinea" />
+        </property>
+    </class>
+</hibernate-mapping>

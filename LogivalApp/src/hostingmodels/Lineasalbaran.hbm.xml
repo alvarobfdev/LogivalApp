@@ -1,0 +1,124 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 02-mar-2016 10:43:18 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="hostingmodels.Lineasalbaran" table="lineasalbaran" catalog="hosting_logival">
+        <composite-id name="id" class="hostingmodels.LineasalbaranId">
+            <key-property name="codcli" type="short">
+                <column name="codcli" />
+            </key-property>
+            <key-property name="tipalb" type="string">
+                <column name="tipalb" length="5" />
+            </key-property>
+            <key-property name="seralb" type="string">
+                <column name="seralb" length="2" />
+            </key-property>
+            <key-property name="ejerci" type="short">
+                <column name="ejerci" />
+            </key-property>
+            <key-property name="numalb" type="int">
+                <column name="numalb" />
+            </key-property>
+            <key-property name="numlin" type="short">
+                <column name="numlin" />
+            </key-property>
+        </composite-id>
+        <property name="idalb" type="int">
+            <column name="idalb" not-null="true" />
+        </property>
+        <property name="codart" type="string">
+            <column name="codart" length="20" not-null="true">
+                <comment>Codigo Articulo (en blanco es una linea de varios)</comment>
+            </column>
+        </property>
+        <property name="cantid" type="big_decimal">
+            <column name="cantid" precision="9" scale="3">
+                <comment>Cantidad</comment>
+            </column>
+        </property>
+        <property name="bultos" type="java.lang.Short">
+            <column name="bultos">
+                <comment>Bultos</comment>
+            </column>
+        </property>
+        <property name="kilos" type="big_decimal">
+            <column name="kilos" precision="7">
+                <comment>Kilos</comment>
+            </column>
+        </property>
+        <property name="volume" type="big_decimal">
+            <column name="volume" precision="7" scale="3">
+                <comment>Volumen</comment>
+            </column>
+        </property>
+        <property name="palets" type="java.lang.Short">
+            <column name="palets">
+                <comment>Palets</comment>
+            </column>
+        </property>
+        <property name="fecalb" type="date">
+            <column name="fecalb" length="10" />
+        </property>
+        <property name="descri" type="string">
+            <column name="descri" length="40">
+                <comment>Descripcion</comment>
+            </column>
+        </property>
+        <property name="fcaduc" type="date">
+            <column name="fcaduc" length="10">
+                <comment>Fecha caducidad</comment>
+            </column>
+        </property>
+        <property name="lotefb" type="string">
+            <column name="lotefb" length="20">
+                <comment>Numero de lote</comment>
+            </column>
+        </property>
+        <property name="nserie" type="string">
+            <column name="nserie" length="20">
+                <comment>Numero de serie</comment>
+            </column>
+        </property>
+        <property name="serped" type="string">
+            <column name="serped" length="2">
+                <comment>Serie pedido</comment>
+            </column>
+        </property>
+        <property name="ejeped" type="java.lang.Short">
+            <column name="ejeped">
+                <comment>Ejercicio pedido</comment>
+            </column>
+        </property>
+        <property name="numped" type="java.lang.Integer">
+            <column name="numped">
+                <comment>Numero Pedido</comment>
+            </column>
+        </property>
+        <property name="linped" type="java.lang.Short">
+            <column name="linped">
+                <comment>Linea de pedido</comment>
+            </column>
+        </property>
+        <property name="precio" type="big_decimal">
+            <column name="precio" precision="9">
+                <comment>Precio Unitario</comment>
+            </column>
+        </property>
+        <property name="dtoli1" type="big_decimal">
+            <column name="dtoli1" precision="5">
+                <comment>Dto. 1</comment>
+            </column>
+        </property>
+        <property name="dtoli2" type="big_decimal">
+            <column name="dtoli2" precision="5">
+                <comment>Dto. 1</comment>
+            </column>
+        </property>
+        <property name="coddel" type="java.lang.Short">
+            <column name="coddel">
+                <comment>Codigo delegacion</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>
