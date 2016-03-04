@@ -46,11 +46,11 @@ public class RefreshClientWebInvoices extends Thread implements FacturasHelper {
         progressBar.setVisible(true);
         labelProgress.setText("Actualizando web...");
                 
-		String json = getJson(selectedRows, table1, sorter);
-		System.out.println(json);
+		
 		
 		try {
-			
+			String json = getJson(selectedRows, table1, sorter);
+			System.out.println(json);
 			URL url = new URL(new Config(Thread.currentThread().getContextClassLoader()).getProperty("refresh_invoices_client_web_api"));
 			HttpURLConnection connection = (HttpURLConnection) url.openConnection();
 	        connection.setConnectTimeout(5000); //Timeout 5s

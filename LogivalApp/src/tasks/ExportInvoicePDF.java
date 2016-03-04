@@ -61,11 +61,10 @@ public class ExportInvoicePDF extends Thread implements FacturasHelper {
 	@Override
 	public void run() {
 		
-		String json = getJson(selectedRows, table1, sorter);
-		System.out.println(json);
 		
-	
 		try {
+			String json = getJson(selectedRows, table1, sorter);
+			System.out.println(json);
 			String now = new SimpleDateFormat("yyyy-MM-dd-HH-mm-ss").format(new Date());
 			File file = new File(directory+"/facturas-"+now+".zip");
 			System.out.println(directory+"/facturas-"+now+".zip");
